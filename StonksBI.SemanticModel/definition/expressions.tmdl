@@ -1,0 +1,24 @@
+expression PathtoTickersCSV = "C:\Users\KlausFolz\Desktop\Repositories\StonksBI\tickers.csv" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: bd280823-69d3-4fed-a864-fa0f936fe984
+	queryGroup: Parameters
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression Interval = "1d" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 29b8c2d7-5179-4c31-af66-f7fc9eae02fd
+	queryGroup: Parameters
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression Range = "1y" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: e5e4eda3-38bf-4b3d-915b-3b5a70d0de55
+	queryGroup: Parameters
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

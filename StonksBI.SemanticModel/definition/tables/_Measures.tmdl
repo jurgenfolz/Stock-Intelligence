@@ -1,0 +1,126 @@
+table _Measures
+	lineageTag: e18fec4d-e6d1-459d-a072-a082425d8b7c
+
+	/// The “Close Price” measure computes the average of the 'Close' column
+	/// for the current filter context (e.g., date, ticker).
+	/// "Close" represents the final trading price of the stock on a given day (or interval).
+	/// Using AVERAGE() here makes sense if you have multiple intraday rows that you want
+	/// to aggregate into a single representative price for each context.
+	/// If each date/ticker only has a single Close value, AVERAGE() = that value
+	measure ClosePrice = ```
+			
+			/* The “Close Price” measure computes the average of the 'Close' column
+			 for the current filter context (e.g., date, ticker).
+			 "Close" represents the final trading price of the stock on a given day (or interval).
+			 Using AVERAGE() here makes sense if you have multiple intraday rows that you want
+			 to aggregate into a single representative price for each context.
+			 If each date/ticker only has a single Close value, AVERAGE() = that value*/
+			AVERAGE('factIndicators'[Close])
+			
+			
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 2585ac4d-3f94-4b6b-946d-6ee0b9c3e4b4
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// The “Total Volume” measure sums the 'Volume' column
+	/// for the current filter context (e.g., date range, ticker).
+	/// "Volume" is the total number of shares (or contracts) traded during a specific period.
+	measure TotalVolume = ```
+			
+			/* The “Total Volume” measure sums the 'Volume' column
+			 for the current filter context (e.g., date range, ticker).
+			 "Volume" is the total number of shares (or contracts) traded during a specific period.
+			*/
+			SUM('factIndicators'[Volume])
+			
+			```
+		formatString: 0
+		lineageTag: 112b4a18-1ca2-4978-b3b8-5fef901514d3
+
+	/// The “SMA (50-Day)” measure calculates a 50-day Simple Moving Average of the closing price.
+	/// A simple moving average smooths out short-term fluctuations in the price over a specific period.
+	/// This measure looks back 50 calendar days from the current context date (inclusive).
+	measure SMA50Day = ```
+			
+			/* The “SMA (50-Day)” measure calculates a 50-day Simple Moving Average of the closing price.
+			 A simple moving average smooths out short-term fluctuations in the price over a specific period.
+			 This measure looks back 50 calendar days from the current context date (inclusive).
+			*/
+			CALCULATE(
+			    [ClosePrice],
+			    DATESINPERIOD(
+			        'Calendar'[Date],
+			        MAX('Calendar'[Date]),
+			        -15,
+			        DAY
+			    )
+			)
+			
+			```
+		lineageTag: 3f584946-c9b2-4ea7-92f4-d0853a8338da
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure OpenPrice =
+			
+			/* The “Open Price” measure computes the average of the 'Open' column
+			   for the current filter context (e.g., date, ticker).
+			   "Open" represents the initial trading price of the stock on a given day (or interval).
+			   Using AVERAGE() here makes sense if you have multiple intraday rows that you want
+			   to aggregate into a single representative price for each context.
+			   If each date/ticker only has a single Open value, AVERAGE() = that value */
+			AVERAGE('factIndicators'[Open])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 445ae17e-0451-45a2-a6f7-151d44f95d0e
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure HighPrice = ```
+			
+			/* The “High Price” measure computes the average of the 'High' column
+			   for the current filter context (e.g., date, ticker).
+			   "High" represents the highest trading price of the stock on a given day (or interval).
+			   Using AVERAGE() here is consistent with the approach for other price measures 
+			   if you have multiple intraday rows that you want
+			   to aggregate into a single representative price for each context.
+			   If each date/ticker only has a single High value, AVERAGE() = that value */
+			AVERAGE('factIndicators'[High])
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 376dd24b-77d0-4c19-9742-fd9d45b92ade
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure LowPrice = ```
+			
+			/* The “Low Price” measure computes the average of the 'Low' column
+			   for the current filter context (e.g., date, ticker).
+			   "Low" represents the lowest trading price of the stock on a given day (or interval).
+			   Using AVERAGE() here is consistent with the approach for other price measures 
+			   if you have multiple intraday rows that you want
+			   to aggregate into a single representative price for each context.
+			   If each date/ticker only has a single Low value, AVERAGE() = that value */
+			AVERAGE('factIndicators'[Low])
+			
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 5e2e5401-f84f-4522-94ae-74bea53ac0e6
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

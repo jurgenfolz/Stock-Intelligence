@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "StonksBI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "624016c2-330b-4ae3-ae2b-aa1e3b5ee66d"
+  }
+}

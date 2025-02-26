@@ -1,0 +1,8 @@
+relationship AutoDetected_bbb74ba3-fe6d-421b-be56-5dc1fc4519e3
+	fromColumn: factIndicators.Ticker
+	toColumn: dTickers.Ticker
+
+relationship e2f9efff-f8ba-dbfe-047e-73bc8c637f59
+	fromColumn: factIndicators.Date
+	toColumn: Calendar.Date
+

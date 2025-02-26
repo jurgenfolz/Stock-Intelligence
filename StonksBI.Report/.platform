@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "StonksBI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cc7308e6-a807-47c0-ab22-c97b94c5e25c"
+  }
+}

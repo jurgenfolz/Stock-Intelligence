@@ -1,0 +1,83 @@
+table Calendar
+	lineageTag: f5618063-a41f-4b73-b950-101e4401f1cd
+
+	column Date
+		formatString: Short Date
+		lineageTag: 02f98b62-cba4-4e9f-a87c-ac112eb03b5f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: 8f5566d8-29dc-4b15-8f18-e388acb90c2f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: e0ef7e09-caa4-472a-8e53-82cc5ebc385f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		formatString: 0
+		lineageTag: 9425f6ea-1ab8-459e-9886-2cc86ca24b2f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		lineageTag: d390bb77-6e31-46c1-8a09-747d014b0b58
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		lineageTag: c97c3f3c-9a31-4c48-a16a-711fadd594c7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YearMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeek
+		lineageTag: 6eebb1d3-7439-4267-beab-6ac9433d490c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DayOfWeek]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar = calculated
+		mode: import
+		source = ```
+				
+				ADDCOLUMNS(
+				    CALENDAR(
+				        MINX('factIndicators', 'factIndicators'[DateTime (UTC)]),
+				        MAXX('factIndicators', 'factIndicators'[DateTime (UTC)])
+				    ),
+				    "Year",         YEAR([Date]),
+				    "Quarter",      "Q" & FORMAT([Date], "Q"),
+				    "MonthNumber",  MONTH([Date]),
+				    "MonthName",    FORMAT([Date], "MMMM"),
+				    "YearMonth",    FORMAT([Date], "YYYY-MM"),
+				    "DayOfWeek",    FORMAT([Date], "ddd")
+				)
+				
+				```
+
+	annotation PBI_Id = fac9ad0580844c678460dd9b19a76888
+

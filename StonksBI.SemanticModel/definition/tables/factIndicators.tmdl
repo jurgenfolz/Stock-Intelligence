@@ -1,0 +1,207 @@
+table factIndicators
+	lineageTag: 6a92cfc3-5781-478a-95e0-564e70cc9adc
+
+	column Ticker
+		dataType: string
+		lineageTag: 289c4a15-50c1-489b-aba6-25684d4d3dda
+		summarizeBy: none
+		sourceColumn: Ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DateTime (UTC)'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ed9123f9-f9f7-4ada-b8e8-bc528bfb26d1
+		summarizeBy: none
+		sourceColumn: DateTime (UTC)
+
+		annotation SummarizationSetBy = Automatic
+
+	column Open
+		dataType: double
+		lineageTag: e035daef-bfcc-43c1-8b4d-3d8342a45513
+		summarizeBy: sum
+		sourceColumn: Open
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column High
+		dataType: double
+		lineageTag: ea0633de-3d6c-4191-9b16-5cfd5e64819a
+		summarizeBy: sum
+		sourceColumn: High
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Low
+		dataType: double
+		lineageTag: 8a588002-83a4-41ab-af61-b529ab4d9bef
+		summarizeBy: sum
+		sourceColumn: Low
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Close
+		dataType: double
+		lineageTag: dfbdd23f-d91d-444d-a8af-53e5fe575d1c
+		summarizeBy: sum
+		sourceColumn: Close
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Volume
+		dataType: int64
+		formatString: 0
+		lineageTag: 26be6a75-b4e0-436b-bd28-ad8f803f41bc
+		summarizeBy: sum
+		sourceColumn: Volume
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ac4a4f63-97b3-469a-bcb3-bd2539f47ce0
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Time
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: b2f45e0c-d0ea-4fbc-b080-f734f929b9a8
+		summarizeBy: none
+		sourceColumn: Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	partition factIndicators = m
+		mode: import
+		source = ```
+				let
+				    //Import the CSV of Tickers
+				
+				    Source = Csv.Document(
+				        File.Contents(PathtoTickersCSV),
+				        [Delimiter=",", Columns=1, QuoteStyle=QuoteStyle.None]
+				    ),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Ticker", type text}}),
+				
+				    //Add a column that calls the API and returns raw JSON for each Ticker
+				    WithAPICall = Table.AddColumn(
+				        #"Changed Type",
+				        "APICall",
+				        each 
+				            Web.Contents(
+				                "https://query1.finance.yahoo.com",
+				                [
+				                    RelativePath = "v8/finance/chart/" & [Ticker],
+				                    Query = [
+				                        interval = Interval,
+				                        range   = Range
+				                    ]
+				                ]
+				            )
+				    ),
+				    //Parse the JSON into a usable record
+				    WithParsedJSON = Table.AddColumn(
+				        WithAPICall,
+				        "ParsedJSON",
+				        each Json.Document([APICall])
+				    ),
+				    // This step extracts timestamps, open, high, low, close, volume arrays and transforms them into a proper table (one row per historical record).
+				    WithDataTable = Table.AddColumn(
+				        WithParsedJSON,
+				        "HistoricData",
+				        each
+				            let
+				                rawJson                = [ParsedJSON],
+				                chartRecord            = rawJson[chart],
+				                resultsList            = chartRecord[result],
+				                firstResult            = resultsList{0},
+				                timestamps            = firstResult[timestamp],
+				                indicatorsRecord       = firstResult[indicators],
+				                quoteList              = indicatorsRecord[quote],
+				                firstQuote             = quoteList{0},
+				                opens                  = firstQuote[open],
+				                highs                  = firstQuote[high],
+				                lows                   = firstQuote[low],
+				                closes                = firstQuote[close],
+				                volumes                = firstQuote[volume],
+				
+				                // Build a list of records from the arrays
+				                combinedRecords = List.Transform(
+				                    {0..(List.Count(timestamps) - 1)},
+				                    (i) => [
+				                        timestamp = timestamps{i},
+				                        open      = opens{i},
+				                        high      = highs{i},
+				                        low       = lows{i},
+				                        close     = closes{i},
+				                        volume    = volumes{i}
+				                    ]
+				                ),
+				
+				                // Convert the list of records into a table
+				                dataTable = Table.FromRecords(combinedRecords)
+				            in
+				                dataTable
+				    ),
+				    ExpandedData = Table.ExpandTableColumn(
+				        WithDataTable,
+				        "HistoricData",
+				        {"timestamp","open","high","low","close","volume"},
+				        {"timestamp","open","high","low","close","volume"}
+				    ),
+				
+				    // Unix timestamps to human-readable DateTime
+				    WithDateTime = Table.TransformColumns(
+				        ExpandedData,
+				        {
+				            { 
+				                "timestamp", 
+				                each #datetime(1970, 1, 1, 0, 0, 0) + #duration(0,0,0,_), 
+				                type datetime 
+				            }
+				        }
+				    ),
+				
+				
+				    RenamedColumns = Table.RenameColumns(
+				        WithDateTime,
+				        {
+				            {"timestamp", "DateTime (UTC)"},
+				            {"open", "Open"},
+				            {"high", "High"},
+				            {"low", "Low"},
+				            {"close", "Close"},
+				            {"volume", "Volume"}
+				        }
+				    ),
+				    #"Removed Columns" = Table.RemoveColumns(RenamedColumns,{"APICall", "ParsedJSON"}),
+				    #"Inserted Date" = Table.AddColumn(#"Removed Columns", "Date", each DateTime.Date([#"DateTime (UTC)"]), type date),
+				    #"Inserted Time" = Table.AddColumn(#"Inserted Date", "Time", each DateTime.Time([#"DateTime (UTC)"]), type time),
+				    #"Changed Type for numbers" = Table.TransformColumnTypes(#"Inserted Time",{{"Close", type number}, {"Low", type number}, {"High", type number}, {"Open", type number}, {"Volume", Int64.Type}})
+				in
+				    #"Changed Type for numbers"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

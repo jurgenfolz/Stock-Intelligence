@@ -1,0 +1,261 @@
+table dTickers
+	lineageTag: 73ed73ea-8ba7-42bf-b21b-01591a862ac9
+
+	column Ticker
+		dataType: string
+		lineageTag: f7ba25c9-dc46-4567-bb33-d9e55012bef6
+		summarizeBy: none
+		sourceColumn: Ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency
+		dataType: string
+		lineageTag: d6081160-0051-4aa9-b092-4c2a933d387d
+		summarizeBy: none
+		sourceColumn: currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column symbol
+		dataType: string
+		lineageTag: 41c8dd64-881d-473b-b9cd-cdd6a5bad12c
+		summarizeBy: none
+		sourceColumn: symbol
+
+		annotation SummarizationSetBy = Automatic
+
+	column exchangeName
+		dataType: string
+		lineageTag: 304d55de-5710-45cd-8b92-ceb31dac4e04
+		summarizeBy: none
+		sourceColumn: exchangeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column fullExchangeName
+		dataType: string
+		lineageTag: c66a336f-7c0d-4d3c-863c-22eb94031bd6
+		summarizeBy: none
+		sourceColumn: fullExchangeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column instrumentType
+		dataType: string
+		lineageTag: f7681fa8-b19d-40f6-aae8-559e6e4b34d5
+		summarizeBy: none
+		sourceColumn: instrumentType
+
+		annotation SummarizationSetBy = Automatic
+
+	column firstTradeDate
+		dataType: string
+		lineageTag: 330f953b-80c0-4988-aeb2-53c67ebd33d8
+		summarizeBy: none
+		sourceColumn: firstTradeDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column regularMarketTime
+		dataType: string
+		lineageTag: cbff8497-37b9-4235-9726-bdf3b8b950b2
+		summarizeBy: none
+		sourceColumn: regularMarketTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column hasPrePostMarketData
+		dataType: string
+		lineageTag: 08dd9925-68a8-4b16-9cab-525c69d8747c
+		summarizeBy: none
+		sourceColumn: hasPrePostMarketData
+
+		annotation SummarizationSetBy = Automatic
+
+	column gmtoffset
+		dataType: string
+		lineageTag: ce1f217b-dea3-4975-8b15-27ec0ded96a6
+		summarizeBy: none
+		sourceColumn: gmtoffset
+
+		annotation SummarizationSetBy = Automatic
+
+	column timezone
+		dataType: string
+		lineageTag: 7efd2810-6b90-4471-8414-49715d3ad1ed
+		summarizeBy: none
+		sourceColumn: timezone
+
+		annotation SummarizationSetBy = Automatic
+
+	column exchangeTimezoneName
+		dataType: string
+		lineageTag: 8c1bbe50-5e00-4e1f-9a6d-7f26a6089c3e
+		summarizeBy: none
+		sourceColumn: exchangeTimezoneName
+
+		annotation SummarizationSetBy = Automatic
+
+	column regularMarketPrice
+		dataType: string
+		lineageTag: c2f9425b-3a98-4d65-8146-3829c474a083
+		summarizeBy: none
+		sourceColumn: regularMarketPrice
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiftyTwoWeekHigh
+		dataType: string
+		lineageTag: aa0b9cd5-0db4-41cf-a5aa-ae703d11d96e
+		summarizeBy: none
+		sourceColumn: fiftyTwoWeekHigh
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiftyTwoWeekLow
+		dataType: string
+		lineageTag: c720008c-590b-419d-87df-1e59f72a5ebe
+		summarizeBy: none
+		sourceColumn: fiftyTwoWeekLow
+
+		annotation SummarizationSetBy = Automatic
+
+	column regularMarketDayHigh
+		dataType: string
+		lineageTag: 2719cee2-daf6-4fd1-8a3b-f4bb5eacf9d0
+		summarizeBy: none
+		sourceColumn: regularMarketDayHigh
+
+		annotation SummarizationSetBy = Automatic
+
+	column regularMarketDayLow
+		dataType: string
+		lineageTag: 845ffcb8-3529-4c55-a202-b34d83282e7e
+		summarizeBy: none
+		sourceColumn: regularMarketDayLow
+
+		annotation SummarizationSetBy = Automatic
+
+	column regularMarketVolume
+		dataType: string
+		lineageTag: 2614be25-cb5a-4603-8d61-93884dbb59b3
+		summarizeBy: none
+		sourceColumn: regularMarketVolume
+
+		annotation SummarizationSetBy = Automatic
+
+	column longName
+		dataType: string
+		lineageTag: 8638557c-35ef-445e-96a8-16d1a48f5ece
+		summarizeBy: none
+		sourceColumn: longName
+
+		annotation SummarizationSetBy = Automatic
+
+	column shortName
+		dataType: string
+		lineageTag: e46ce882-9eff-481f-a0d8-9adc80aea8ee
+		summarizeBy: none
+		sourceColumn: shortName
+
+		annotation SummarizationSetBy = Automatic
+
+	column chartPreviousClose
+		dataType: string
+		lineageTag: bec902e2-5b53-40a4-9407-9bd8ba2db6da
+		summarizeBy: none
+		sourceColumn: chartPreviousClose
+
+		annotation SummarizationSetBy = Automatic
+
+	column priceHint
+		dataType: string
+		lineageTag: 6e87c386-4857-4d73-8ec3-f594fd695a85
+		summarizeBy: none
+		sourceColumn: priceHint
+
+		annotation SummarizationSetBy = Automatic
+
+	column currentTradingPeriod
+		dataType: string
+		lineageTag: 80b8bea8-ff7a-4e81-b962-8403de821f39
+		summarizeBy: none
+		sourceColumn: currentTradingPeriod
+
+		annotation SummarizationSetBy = Automatic
+
+	column dataGranularity
+		dataType: string
+		lineageTag: 528a9081-f01e-4591-86dc-6c9c7b9d89d9
+		summarizeBy: none
+		sourceColumn: dataGranularity
+
+		annotation SummarizationSetBy = Automatic
+
+	column range
+		dataType: string
+		lineageTag: 3711745e-bd33-4272-91d2-3a79a6c82b32
+		summarizeBy: none
+		sourceColumn: range
+
+		annotation SummarizationSetBy = Automatic
+
+	column validRanges
+		dataType: string
+		lineageTag: d3e06571-6e5b-4740-a0ea-a8de6edaedf0
+		summarizeBy: none
+		sourceColumn: validRanges
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dTickers = m
+		mode: import
+		source = ```
+				let
+				    //Import the CSV of Tickers
+				
+				    Source = Csv.Document(
+				        File.Contents(PathtoTickersCSV),
+				        [Delimiter=",", Columns=1, QuoteStyle=QuoteStyle.None]
+				    ),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Ticker", type text}}),
+				
+				    //Add a column that calls the API and returns raw JSON for each Ticker
+				    WithAPICall = Table.AddColumn(
+				        #"Changed Type",
+				        "APICall",
+				        each 
+				            Web.Contents(
+				                "https://query1.finance.yahoo.com",
+				                [
+				                    RelativePath = "v8/finance/chart/" & [Ticker],
+				                    Query = [
+				                        interval = Interval,
+				                        range   = Range
+				                    ]
+				                ]
+				            )
+				    ),
+				    //Parse the JSON into a usable record
+				    WithParsedJSON = Table.AddColumn(
+				        WithAPICall,
+				        "ParsedJSON",
+				        each Json.Document([APICall])
+				    ),
+				    #"Removed Columns" = Table.RemoveColumns(WithParsedJSON,{"APICall"}),
+				    #"Expanded ParsedJSON" = Table.ExpandRecordColumn(#"Removed Columns", "ParsedJSON", {"chart"}, {"chart"}),
+				    #"Expanded chart" = Table.ExpandRecordColumn(#"Expanded ParsedJSON", "chart", {"result"}, {"result"}),
+				    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Expanded chart", {"result"}),
+				    #"Expanded result" = Table.ExpandListColumn(#"Removed Errors", "result"),
+				    #"Expanded result1" = Table.ExpandRecordColumn(#"Expanded result", "result", {"meta"}, {"meta"}),
+				    #"Expanded meta" = Table.ExpandRecordColumn(#"Expanded result1", "meta", {"currency", "symbol", "exchangeName", "fullExchangeName", "instrumentType", "firstTradeDate", "regularMarketTime", "hasPrePostMarketData", "gmtoffset", "timezone", "exchangeTimezoneName", "regularMarketPrice", "fiftyTwoWeekHigh", "fiftyTwoWeekLow", "regularMarketDayHigh", "regularMarketDayLow", "regularMarketVolume", "longName", "shortName", "chartPreviousClose", "priceHint", "currentTradingPeriod", "dataGranularity", "range", "validRanges"}, {"currency", "symbol", "exchangeName", "fullExchangeName", "instrumentType", "firstTradeDate", "regularMarketTime", "hasPrePostMarketData", "gmtoffset", "timezone", "exchangeTimezoneName", "regularMarketPrice", "fiftyTwoWeekHigh", "fiftyTwoWeekLow", "regularMarketDayHigh", "regularMarketDayLow", "regularMarketVolume", "longName", "shortName", "chartPreviousClose", "priceHint", "currentTradingPeriod", "dataGranularity", "range", "validRanges"})
+				in
+				    #"Expanded meta"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

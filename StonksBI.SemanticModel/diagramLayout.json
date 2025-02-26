@@ -1,0 +1,76 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 892,
+            "y": 489
+          },
+          "nodeIndex": "dTickers",
+          "nodeLineageTag": "73ed73ea-8ba7-42bf-b21b-01591a862ac9",
+          "size": {
+            "height": 104,
+            "width": 390
+          },
+          "zIndex": 1,
+          "expandedHeight": 313
+        },
+        {
+          "location": {
+            "x": 522,
+            "y": 475
+          },
+          "nodeIndex": "factIndicators",
+          "nodeLineageTag": "6a92cfc3-5781-478a-95e0-564e70cc9adc",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 979,
+            "y": 204
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "e18fec4d-e6d1-459d-a072-a082425d8b7c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 177,
+            "y": 511.5
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "f5618063-a41f-4b73-b950-101e4401f1cd",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 4,
+          "expandedHeight": 200
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
