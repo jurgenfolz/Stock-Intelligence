@@ -19,7 +19,8 @@ table _Measures
 			
 			
 			```
-		formatString: \$#,0;(\$#,0);\$#,0
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Basic metrics
 		lineageTag: 2585ac4d-3f94-4b6b-946d-6ee0b9c3e4b4
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
@@ -37,6 +38,7 @@ table _Measures
 			
 			```
 		formatString: 0
+		displayFolder: Basic metrics
 		lineageTag: 112b4a18-1ca2-4978-b3b8-5fef901514d3
 
 	/// The “SMA (50-Day)” measure calculates a 50-day Simple Moving Average of the closing price.
@@ -59,6 +61,7 @@ table _Measures
 			)
 			
 			```
+		displayFolder: Moving averages
 		lineageTag: 3f584946-c9b2-4ea7-92f4-d0853a8338da
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -73,6 +76,7 @@ table _Measures
 			   If each date/ticker only has a single Open value, AVERAGE() = that value */
 			AVERAGE('factIndicators'[Open])
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Basic metrics
 		lineageTag: 445ae17e-0451-45a2-a6f7-151d44f95d0e
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
@@ -89,6 +93,7 @@ table _Measures
 			AVERAGE('factIndicators'[High])
 			```
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Basic metrics
 		lineageTag: 376dd24b-77d0-4c19-9742-fd9d45b92ade
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
@@ -106,6 +111,7 @@ table _Measures
 			
 			```
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Basic metrics
 		lineageTag: 5e2e5401-f84f-4522-94ae-74bea53ac0e6
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
@@ -117,7 +123,26 @@ table _Measures
 			RETURN "Daily Stock Price Fluctuations – " & SelectedCompany & " ("&SelectedTicker&")"
 			
 			```
+		displayFolder: Titles
 		lineageTag: 59f39dc5-b794-4614-8276-1262fc44c82e
+
+	measure PriceChange = ```
+			[ClosePrice] - [OpenPrice]
+			
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Basic metrics
+		lineageTag: da70fdc8-4ffe-46c0-b803-47482fa57513
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure PriceChangeRelative = ```
+			DIVIDE([ClosePrice] - [OpenPrice],[OpenPrice])
+			
+			```
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Basic metrics
+		lineageTag: 5473e64f-549e-4655-9299-d1b94235d2f9
 
 	partition _Measures = m
 		mode: import

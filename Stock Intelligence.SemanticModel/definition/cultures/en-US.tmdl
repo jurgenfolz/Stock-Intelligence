@@ -3104,6 +3104,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.485
 			          }
+			        },
+			        {
+			          "Close": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3230,15 +3240,13 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "simple moving average": {
-			            "State": "Generated"
+			          "SimpleMovingAverage": {
+			            "LastModified": "2025-02-27T07:36:23.434Z"
 			          }
 			        },
 			        {
-			          "SimpleMovingAverage": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
+			          "simple moving average": {
+			            "State": "Generated"
 			          }
 			        },
 			        {
@@ -3325,6 +3333,12 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "moving averagesSimpleMovingAverage": {
+			            "State": "Deleted",
+			            "LastModified": "2025-02-27T07:36:23.435Z"
 			          }
 			        }
 			      ]
@@ -3454,6 +3468,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Open": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4357,9 +4381,336 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.price_change": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "PriceChange"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "price change": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PriceChange": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "change": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "price alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "price modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "price variation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "price transformation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "price revolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "price conversion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "price adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "price amendment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.price_change_relative": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "PriceChangeRelative"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "price change relative": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PriceChangeRelative": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "relative": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "change relative": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "price change relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "comparative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "change relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "Change (%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Change": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "d_ticker.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dTickers",
+			          "ConceptualProperty": "Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
 			    }
 			  },
 			  "Relationships": {
+			    "days_moving_average_parameter_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "DaysMovingAverageParameter"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "days_moving_average_parameter": {
+			          "Target": {
+			            "Entity": "days_moving_average_parameter"
+			          }
+			        },
+			        "days_moving_average_parameter.day": {
+			          "Target": {
+			            "Entity": "days_moving_average_parameter.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "days_moving_average_parameter"
+			            },
+			            "Object": {
+			              "Role": "days_moving_average_parameter.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "days_moving_average_parameters_have_days"
+			        }
+			      ]
+			    },
+			    "calendar_has_day_of_week": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "calendar.day_of_week": {
+			          "Target": {
+			            "Entity": "calendar.day_of_week"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "calendar.day_of_week"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendars_have_day_of_week"
+			        }
+			      ]
+			    },
 			    "calendar_has_year_month": {
 			      "Binding": {
 			        "ConceptualEntity": "Calendar"
@@ -4800,7 +5151,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_indicators_have_simple_moving_average"
+			          "ID": "fact_indicators_have_SimpleMovingAverage"
 			        }
 			      ]
 			    },
@@ -6051,53 +6402,66 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "calendar_has_day_of_week": {
+			    "d_ticker_is_named_name": {
 			      "Binding": {
-			        "ConceptualEntity": "Calendar"
+			        "ConceptualEntity": "dTickers"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calendar": {
+			        "d_ticker": {
 			          "Target": {
-			            "Entity": "calendar"
+			            "Entity": "d_ticker"
 			          }
 			        },
-			        "calendar.day_of_week": {
+			        "d_ticker.name": {
 			          "Target": {
-			            "Entity": "calendar.day_of_week"
+			            "Entity": "d_ticker.name"
 			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Attribute": {
+			          "Name": {
 			            "Subject": {
-			              "Role": "calendar"
+			              "Role": "d_ticker"
 			            },
-			            "Object": {
-			              "Role": "calendar.day_of_week"
+			            "Name": {
+			              "Role": "d_ticker.name"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calendars_have_day_of_week"
+			          "ID": "names_are_names_IDs_of_d_tickers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_ticker"
+			            },
+			            "Object": {
+			              "Role": "d_ticker.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_tickers_have_names"
 			        }
 			      ]
 			    },
-			    "days_moving_average_parameter_has_day": {
+			    "fact_indicator_has_entity__measure_price_change": {
 			      "Binding": {
-			        "ConceptualEntity": "DaysMovingAverageParameter"
+			        "ConceptualEntity": "factIndicators"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "days_moving_average_parameter": {
+			        "fact_indicator": {
 			          "Target": {
-			            "Entity": "days_moving_average_parameter"
+			            "Entity": "fact_indicator"
 			          }
 			        },
-			        "days_moving_average_parameter.day": {
+			        "entity__measure.price_change": {
 			          "Target": {
-			            "Entity": "days_moving_average_parameter.day"
+			            "Entity": "entity__measure.price_change"
 			          }
 			        }
 			      },
@@ -6105,15 +6469,48 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "days_moving_average_parameter"
+			              "Role": "fact_indicator"
 			            },
 			            "Object": {
-			              "Role": "days_moving_average_parameter.day"
+			              "Role": "entity__measure.price_change"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "days_moving_average_parameters_have_days"
+			          "ID": "fact_indicators_have_price_change"
+			        }
+			      ]
+			    },
+			    "fact_indicator_has_entity__measure_price_change_relative": {
+			      "Binding": {
+			        "ConceptualEntity": "factIndicators"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_indicator": {
+			          "Target": {
+			            "Entity": "fact_indicator"
+			          }
+			        },
+			        "entity__measure.price_change_relative": {
+			          "Target": {
+			            "Entity": "entity__measure.price_change_relative"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_indicator"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.price_change_relative"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_indicators_have_price_change_relative"
 			        }
 			      ]
 			    },

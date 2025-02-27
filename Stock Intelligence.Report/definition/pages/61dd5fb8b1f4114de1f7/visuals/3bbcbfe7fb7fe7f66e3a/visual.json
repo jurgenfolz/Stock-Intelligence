@@ -4,10 +4,10 @@
   "position": {
     "x": 1080.5273069679849,
     "y": 10,
-    "z": 3001,
+    "z": 4000,
     "height": 60,
     "width": 189.83050847457628,
-    "tabOrder": 3001
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -42,7 +42,7 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "5D"
                 }
               }
             }
@@ -79,7 +79,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "15D"
+                            "Value": "5D"
                           }
                         }
                       }

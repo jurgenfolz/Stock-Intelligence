@@ -209,6 +209,12 @@ table dTickers
 
 		annotation SummarizationSetBy = Automatic
 
+	column Name = dTickers[shortName] & " ("&dTickers[Ticker]&")"
+		lineageTag: 588c8a0d-98ed-4ea6-8c53-6be2f0ff921c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dTickers = m
 		mode: import
 		source = ```

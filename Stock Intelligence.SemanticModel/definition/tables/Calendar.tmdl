@@ -2,13 +2,15 @@ table Calendar
 	lineageTag: f5618063-a41f-4b73-b950-101e4401f1cd
 
 	column Date
-		formatString: Short Date
+		formatString: dd/mm/yyyy
 		lineageTag: 02f98b62-cba4-4e9f-a87c-ac112eb03b5f
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Date]
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column Year
 		formatString: 0

@@ -1,4 +1,4 @@
-expression PathtoTickersCSV = "C:\Users\KlausFolz\Desktop\Repositories\StonksBI\tickers.csv" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression PathtoTickersCSV = "C:\Users\KlausFolz\Desktop\Repositories\Stock Intelligence\tickers.csv" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: bd280823-69d3-4fed-a864-fa0f936fe984
 	queryGroup: Parameters
 
