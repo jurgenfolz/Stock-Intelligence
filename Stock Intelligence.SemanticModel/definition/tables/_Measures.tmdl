@@ -42,9 +42,9 @@ table _Measures
 	/// The “SMA (50-Day)” measure calculates a 50-day Simple Moving Average of the closing price.
 	/// A simple moving average smooths out short-term fluctuations in the price over a specific period.
 	/// This measure looks back 50 calendar days from the current context date (inclusive).
-	measure SMA50Day = ```
+	measure SimpleMovingAverage = ```
 			
-			/* The “SMA (50-Day)” measure calculates a 50-day Simple Moving Average of the closing price.
+			/* The Simple Moving Average of the closing price.
 			 A simple moving average smooths out short-term fluctuations in the price over a specific period.
 			 This measure looks back 50 calendar days from the current context date (inclusive).
 			*/
@@ -53,7 +53,7 @@ table _Measures
 			    DATESINPERIOD(
 			        'Calendar'[Date],
 			        MAX('Calendar'[Date]),
-			        -15,
+			        -SELECTEDVALUE('DaysMovingAverageParameter'[Days], 15),
 			        DAY
 			    )
 			)
@@ -109,6 +109,15 @@ table _Measures
 		lineageTag: 5e2e5401-f84f-4522-94ae-74bea53ac0e6
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Candlestick Title' = ```
+			
+			VAR SelectedTicker = SELECTEDVALUE('factIndicators'[Ticker])
+			VAR SelectedCompany = SELECTEDVALUE(dTickers[shortName],"Multiple Stocks")
+			RETURN "Daily Stock Price Fluctuations – " & SelectedCompany & " ("&SelectedTicker&")"
+			
+			```
+		lineageTag: 59f39dc5-b794-4614-8276-1262fc44c82e
 
 	partition _Measures = m
 		mode: import

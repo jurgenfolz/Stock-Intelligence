@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "a59f8ba55ad2f16da00d",
   "position": {
-    "x": 10.24482109227872,
-    "y": 69.905838041431267,
-    "z": 4,
-    "height": 640,
-    "width": 1260.1129943502824,
-    "tabOrder": 4
+    "x": 20,
+    "y": 90,
+    "z": 3000,
+    "height": 610,
+    "width": 1240,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "PBI_CV_886A053E_9DFD_4EA0_A47D_CCAEB89AF969",
@@ -114,11 +114,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "SMA50Day"
+                  "Property": "SimpleMovingAverage"
                 }
               },
               "queryRef": "_Measures.SMA50Day",
-              "nativeQueryRef": "SMA50Day"
+              "nativeQueryRef": "Moving Average",
+              "displayName": "Moving Average"
             }
           ]
         }
@@ -150,6 +151,82 @@
               "expr": {
                 "Literal": {
                   "Value": "'continuous'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "bullishFill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "bearishFill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Candlestick Title"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

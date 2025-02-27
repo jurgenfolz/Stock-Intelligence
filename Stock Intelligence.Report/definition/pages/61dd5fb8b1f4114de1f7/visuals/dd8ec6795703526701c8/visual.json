@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "c843f53d85dc9d82e539",
+  "name": "dd8ec6795703526701c8",
   "position": {
-    "x": 10,
-    "y": 10.470347648261759,
-    "z": 0,
-    "height": 60,
-    "width": 1260,
-    "tabOrder": 0
+    "x": 84.369114877589453,
+    "y": 15.065913370998116,
+    "z": 3005,
+    "height": 50.018832391713744,
+    "width": 300.11299435028246,
+    "tabOrder": 3005
   },
   "visual": {
     "visualType": "shape",
@@ -64,7 +64,7 @@
           }
         }
       ],
-      "shadow": [
+      "text": [
         {
           "properties": {
             "show": {
@@ -75,53 +75,45 @@
               }
             }
           }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "background": [
+        },
         {
           "properties": {
-            "show": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "18D"
                 }
               }
             },
-            "transparency": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "'Stock Intelligence'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
                 }
               }
             }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 892,
-            "y": 489
+            "y": 591
           },
           "nodeIndex": "dTickers",
           "nodeLineageTag": "73ed73ea-8ba7-42bf-b21b-01591a862ac9",
@@ -25,7 +25,7 @@
         {
           "location": {
             "x": 522,
-            "y": 475
+            "y": 577
           },
           "nodeIndex": "factIndicators",
           "nodeLineageTag": "6a92cfc3-5781-478a-95e0-564e70cc9adc",
@@ -38,7 +38,7 @@
         {
           "location": {
             "x": 979,
-            "y": 204
+            "y": 306
           },
           "nodeIndex": "_Measures",
           "nodeLineageTag": "e18fec4d-e6d1-459d-a072-a082425d8b7c",
@@ -51,7 +51,7 @@
         {
           "location": {
             "x": 177,
-            "y": 511.5
+            "y": 613.5
           },
           "nodeIndex": "Calendar",
           "nodeLineageTag": "f5618063-a41f-4b73-b950-101e4401f1cd",
@@ -61,6 +61,18 @@
           },
           "zIndex": 4,
           "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1155,
+            "y": 249.5
+          },
+          "nodeIndex": "DaysMovingAverageParameter",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

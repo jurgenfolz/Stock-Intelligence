@@ -1,0 +1,22 @@
+table DaysMovingAverageParameter
+	lineageTag: 0ff9407e-80ae-452e-ad58-e9e8077a408a
+
+	column Days
+		formatString: 0
+		lineageTag: 647c387c-bfd0-41b7-942f-c16b7e400864
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition DaysMovingAverageParameter = calculated
+		mode: import
+		source = GENERATESERIES(1, 100, 1)
+
+	annotation PBI_Id = eb54c3662d4d4c1ab3aa50a39a4dab0a
+
