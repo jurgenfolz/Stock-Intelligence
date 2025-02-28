@@ -37,8 +37,8 @@
         },
         {
           "location": {
-            "x": 979,
-            "y": 306
+            "x": 581,
+            "y": 219
           },
           "nodeIndex": "_Measures",
           "nodeLineageTag": "e18fec4d-e6d1-459d-a072-a082425d8b7c",
@@ -64,10 +64,11 @@
         },
         {
           "location": {
-            "x": 1155,
-            "y": 249.5
+            "x": 952,
+            "y": 221.5
           },
           "nodeIndex": "DaysMovingAverageParameter",
+          "nodeLineageTag": "0ff9407e-80ae-452e-ad58-e9e8077a408a",
           "size": {
             "height": 224,
             "width": 234
