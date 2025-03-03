@@ -1,0 +1,226 @@
+table dFundamentals
+	lineageTag: 1499683d-38f8-4c4a-b9bb-67be6695aa9b
+
+	column Ticker
+		dataType: string
+		lineageTag: 379d2510-a741-4fd3-bed8-24c58e360f33
+		summarizeBy: none
+		sourceColumn: Ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DateTime (UTC)'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f50842e0-edd5-49e5-87f0-7272db6eae8d
+		summarizeBy: none
+		sourceColumn: DateTime (UTC)
+
+		annotation SummarizationSetBy = Automatic
+
+	column metricType
+		dataType: string
+		lineageTag: b69d41cd-78b8-4761-baca-7cb66dee8fa5
+		summarizeBy: none
+		sourceColumn: metricType
+
+		annotation SummarizationSetBy = Automatic
+
+	column asOfDate
+		dataType: string
+		lineageTag: 270f5335-92c1-40cb-969d-97fce10c4921
+		summarizeBy: none
+		sourceColumn: asOfDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column periodType
+		dataType: string
+		lineageTag: 05264465-3302-4de0-9335-b985195b8a33
+		summarizeBy: none
+		sourceColumn: periodType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Raw Value'
+		dataType: double
+		lineageTag: cb739c39-1ba6-45c9-8817-533abe2d47a2
+		summarizeBy: sum
+		sourceColumn: Raw Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Formatted Value'
+		dataType: string
+		lineageTag: 7c54cab0-03c0-4384-bed0-c7d1ba7b17c0
+		summarizeBy: none
+		sourceColumn: Formatted Value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dFundamentals = m
+		mode: import
+		source = ```
+				let
+				    //Dynamic timestamps
+				    NowLocal = DateTimeZone.LocalNow(),
+				    NowDateTime = DateTimeZone.RemoveZone(NowLocal),
+				    // Subtract 183 days - 6 months:
+				    SixMonthsAgoDateTime = NowDateTime - #duration(183, 0, 0, 0),
+				
+				    Period1 = Number.ToText(
+				        Number.RoundDown(
+				            Duration.TotalSeconds(
+				                SixMonthsAgoDateTime - #datetime(1970, 1, 1, 0, 0, 0)
+				            )
+				        )
+				    ),
+				    Period2 = Number.ToText(
+				        Number.RoundDown(
+				            Duration.TotalSeconds(
+				                NowDateTime - #datetime(1970, 1, 1, 0, 0, 0)
+				            )
+				        )
+				    ),
+				
+				    //Import the CSV of Tickers
+				    Source = Csv.Document(
+				        File.Contents(PathtoTickersCSV),
+				        [Delimiter=",", Columns=1, QuoteStyle=QuoteStyle.None]
+				    ),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Ticker", type text}}),
+				
+				    //fundamentals-timeseries API call for each Ticker
+				    WithAPICall = Table.AddColumn(
+				        #"Changed Type",
+				        "APICall",
+				        each
+				            Web.Contents(
+				                "https://query1.finance.yahoo.com",
+				                [
+				                    RelativePath = "ws/fundamentals-timeseries/v1/finance/timeseries/" & [Ticker],
+				                    Query = [
+				                        merge                  = "false",
+				                        padTimeSeries         = "true",
+				                        period1               = Period1,
+				                        period2               = Period2,
+				                        type                  = 
+				                            "quarterlyMarketCap,trailingMarketCap," &
+				                            "quarterlyEnterpriseValue,trailingEnterpriseValue," &
+				                            "quarterlyPeRatio,trailingPeRatio," &
+				                            "quarterlyForwardPeRatio,trailingForwardPeRatio," &
+				                            "quarterlyPegRatio,trailingPegRatio," &
+				                            "quarterlyPsRatio,trailingPsRatio," &
+				                            "quarterlyPbRatio,trailingPbRatio," &
+				                            "quarterlyEnterprisesValueRevenueRatio,trailingEnterprisesValueRevenueRatio," &
+				                            "quarterlyEnterprisesValueEBITDARatio,trailingEnterprisesValueEBITDARatio",
+				                        lang                  = "en-US",
+				                        region                = "US"
+				                    ]
+				                ]
+				            )
+				    ),
+				    WithParsedJSON = Table.AddColumn(
+				        WithAPICall,
+				        "ParsedJSON",
+				        each Json.Document([APICall])
+				    ),
+				    //Transform the 'timeseries' data into a normalized table.
+				    WithDataTable = Table.AddColumn(
+				        WithParsedJSON,
+				        "MetricsData",
+				        each
+				            let
+				                rawJson   = [ParsedJSON],
+				                timeSeriesRecord = rawJson[timeseries]?,
+				                resultsList = timeSeriesRecord[result]?,
+				
+				                // Combine all metrics into a single list of records:
+				                combinedRecords =
+				                    if resultsList = null 
+				                    then 
+				                        {}
+				                    else 
+				                        List.Combine(
+				                            List.Transform(
+				                                resultsList,
+				                                (metric) =>
+				                                    let
+				                                        // examples "trailingPeRatio", "quarterlyMarketCap"
+				                                        metricType = metric[meta][type]{0},
+				
+				                                        // Timestamps list
+				                                        tsList = metric[timestamp]?,
+				
+				                                        // Each metric's data array is stored under the same name as 'metricType'
+				                                        // For example: metric["trailingPeRatio"] or metric["quarterlyMarketCap"]...
+				                                        metricArray = Record.FieldOrDefault(metric, metricType, null)
+				                                    in
+				                                        if (tsList <> null and metricArray <> null) then
+				                                            List.Transform(
+				                                                List.Zip({tsList, metricArray}),
+				                                                (pair) =>
+				                                                    [
+				                                                        timestamp       = pair{0},
+				                                                        metricType      = metricType,
+				                                                        asOfDate        = pair{1}[asOfDate]?,
+				                                                        periodType      = pair{1}[periodType]?,
+				                                                        rawValue        = pair{1}[reportedValue]?[raw]?,
+				                                                        formattedValue  = pair{1}[reportedValue]?[fmt]?
+				                                                    ]
+				                                            )
+				                                        else
+				                                            {}
+				                            )
+				                        ),
+				
+				                // Convert list of records into a Table
+				                dataTable = Table.FromRecords(combinedRecords)
+				            in
+				                dataTable
+				    ),
+				    ExpandedData = Table.ExpandTableColumn(
+				        WithDataTable,
+				        "MetricsData",
+				        {"timestamp", "metricType", "asOfDate", "periodType", "rawValue", "formattedValue"},
+				        {"timestamp", "metricType", "asOfDate", "periodType", "rawValue", "formattedValue"}
+				    ),
+				    //Convert 'timestamp' to a human-readable DateTime
+				    WithDateTime = Table.TransformColumns(
+				        ExpandedData,
+				        {
+				            {
+				                "timestamp",
+				                each #datetime(1970, 1, 1, 0, 0, 0) + #duration(0,0,0,_),
+				                type datetime
+				            }
+				        }
+				    ),
+				    RenamedCols = Table.RenameColumns(
+				        WithDateTime,
+				        {
+				            {"timestamp", "DateTime (UTC)"},
+				            {"rawValue", "Raw Value"},
+				            {"formattedValue", "Formatted Value"}
+				        }
+				    ),
+				    //Remove JSON columns 
+				    RemovedApiColumns = Table.RemoveColumns(RenamedCols, {"APICall", "ParsedJSON"}),
+				    
+				    ChangedTypes = Table.TransformColumnTypes(
+				        RemovedApiColumns,
+				        {
+				            {"Raw Value", type number}
+				        }
+				    )
+				in
+				    ChangedTypes
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

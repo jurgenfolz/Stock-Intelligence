@@ -12,9 +12,9 @@ queryGroup Parameters
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBIDesktopVersion = 2.140.1078.0 (25.02)+2cce24fb16e8b71ba835921d23e7ffc1fab909df
+annotation PBIDesktopVersion = 2.140.1205.0 (25.02)+2ab3defe107764e1cf486b42122d9362df7f34ea
 
-annotation PBI_QueryOrder = ["factIndicators","PathtoTickersCSV","Interval","Range","dTickers","_Measures"]
+annotation PBI_QueryOrder = ["factIndicators","PathtoTickersCSV","Interval","Range","dTickers","_Measures","dFundamentals"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -23,6 +23,7 @@ ref table factIndicators
 ref table _Measures
 ref table Calendar
 ref table DaysMovingAverageParameter
+ref table dFundamentals
 
 ref cultureInfo en-US
 

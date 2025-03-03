@@ -42,7 +42,7 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "10D"
                 }
               }
             }
@@ -57,7 +57,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "p",
+                    "Name": "d",
                     "Entity": "DaysMovingAverageParameter",
                     "Type": 0
                   }
@@ -71,7 +71,7 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "p"
+                                "Source": "d"
                               }
                             },
                             "Property": "Days"
@@ -79,7 +79,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "5D"
+                            "Value": "10D"
                           }
                         }
                       }
@@ -152,6 +152,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "Days",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }
