@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "a59f8ba55ad2f16da00d",
   "position": {
-    "x": 20,
-    "y": 90,
+    "x": 263.31002331002333,
+    "y": 89.5104895104895,
     "z": 3000,
-    "height": 610,
-    "width": 1240,
+    "height": 610.90909090909088,
+    "width": 996.55011655011663,
     "tabOrder": 3000
   },
   "visual": {
@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "_Measures.ClosePrice",
-              "nativeQueryRef": "ClosePrice"
+              "nativeQueryRef": "Close",
+              "displayName": "Close"
             }
           ]
         },
@@ -64,7 +65,8 @@
                 }
               },
               "queryRef": "_Measures.HighPrice",
-              "nativeQueryRef": "HighPrice"
+              "nativeQueryRef": "High",
+              "displayName": "High"
             }
           ]
         },
@@ -82,7 +84,8 @@
                 }
               },
               "queryRef": "_Measures.LowPrice",
-              "nativeQueryRef": "LowPrice"
+              "nativeQueryRef": "Low",
+              "displayName": "Low"
             }
           ]
         },
@@ -100,7 +103,8 @@
                 }
               },
               "queryRef": "_Measures.OpenPrice",
-              "nativeQueryRef": "OpenPrice"
+              "nativeQueryRef": "Open",
+              "displayName": "Open"
             }
           ]
         },

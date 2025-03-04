@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "83573ec47e40ff22a758",
+  "name": "ba4c636ab0d8e7859fc9",
   "position": {
-    "x": 1031.9604612850083,
-    "y": 10.675453047775948,
-    "z": 2000,
-    "height": 59.90115321252059,
-    "width": 238.4184514003295,
-    "tabOrder": 2000
+    "x": 1030.8624708624709,
+    "y": 9.6969696969696972,
+    "z": 7001,
+    "height": 60.41958041958042,
+    "width": 238.69463869463871,
+    "tabOrder": 7001
   },
   "visual": {
     "visualType": "slicer",
@@ -115,7 +115,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'NVIDIA Corporation'"
+                                "Value": "'Alphabet Inc.'"
                               }
                             }
                           ]
@@ -209,6 +209,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "longName",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

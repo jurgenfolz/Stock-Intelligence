@@ -91,6 +91,7 @@ table factIndicators
 
 	partition factIndicators = m
 		mode: import
+		queryGroup: 'Fact Tables'
 		source = ```
 				let
 				    //Import the CSV of Tickers
@@ -203,5 +204,5 @@ table factIndicators
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

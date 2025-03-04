@@ -217,6 +217,7 @@ table dTickers
 
 	partition dTickers = m
 		mode: import
+		queryGroup: 'Dimension Tables'
 		source = ```
 				let
 				    //Import the CSV of Tickers

@@ -3608,6 +3608,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.485
 			          }
+			        },
+			        {
+			          "High": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3736,6 +3746,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Low": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4629,12 +4649,6504 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.714
 			          }
+			        },
+			        {
+			          "Company": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "NameType": "Name"
+			    },
+			    "entity__measure.quarterly_pe_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Pe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly pe ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPeRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pe ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "quarterly pe proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly pe share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_forward_pe_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "ForwardPe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly forward pe ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyForwardPeRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pe ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "forward pe ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly forward pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly forward pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly forward pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly forward pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "forward pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "forward pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "forward pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "forward pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "Forward PE": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_peg_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Peg"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly peg ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPegRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "peg ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly peg relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly peg percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly peg quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly peg relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "peg relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peg percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peg quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peg relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "quarterly peg proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly peg share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_ps_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Ps"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly ps ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPsRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ps ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly ps relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly ps percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly ps quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly ps relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ps relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ps percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ps quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ps relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "quarterly ps proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly ps share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_market_cap": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "MarketCap"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly market cap": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyMarketCap": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cap": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "market cap": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly market lid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly market cover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly market top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly market stopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly market plug": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "market lid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market cover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market stopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market plug": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_enterprises_value_revenue_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "EnterprisesValueRevenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly enterprises value revenue ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyEnterprisesValueRevenueRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "revenue ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "value revenue ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprises value revenue ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly enterprise value income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "enterprise value income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "value income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "quarterly enterprise value profit ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "quarterly enterprise value turnover ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "quarterly enterprise value yield ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "enterprise value profit ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "enterprise value turnover ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "enterprise value yield ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "EV/Revenue": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_enterprises_value_EBITDA_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "EnterprisesValueEBITDA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly enterprises value EBITDA ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyEnterprisesValueEBITDARatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "EBITDA ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "value EBITDA ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprises value EBITDA ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly enterprise value ebitda relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quarterly enterprise value ebitda percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quarterly enterprise value ebitda quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quarterly enterprise value ebitda relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "enterprise value ebitda relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "enterprise value ebitda percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "enterprise value ebitda quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "enterprise value ebitda relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "value ebitda relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "value ebitda percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "EV/EBITDA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_enterprise_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "EnterpriseValue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly enterprise value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyEnterpriseValue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprise value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly enterprise assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "enterprise assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "quarterly enterprise worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly enterprise price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly enterprise cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly enterprise charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly enterprise rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "enterprise worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "enterprise price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "EV": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_pb_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Pb"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly pb ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPbRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quarterly pb relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pb percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pb quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pb relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pb proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly pb share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly pb fraction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly pb part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "PB Ratio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "d fundamentals TTM": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "d fundamental TTM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "dFundamentalsTTM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "TTM": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "fundamentals TTM": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "fundamental TTM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "d_fundamentals_TTM.period_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "periodType"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "periodType": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "period category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "period class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.ticker": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "Ticker"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ticker": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.trailing_enterprises_value_EBITDA_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "trailingEnterprisesValueEBITDARatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trailing enterprises value EBITDA ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trailing enterprise value EBITDA ratio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "trailingEnterprisesValueEBITDARatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "EBITDA ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "value EBITDA ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprises value EBITDA ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprise value EBITDA ratio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        },
+			        {
+			          "trailing enterprise value ebitda relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "trailing enterprise value ebitda percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "trailing enterprise value ebitda quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "trailing enterprise value ebitda relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "enterprise value ebitda relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "enterprise value ebitda percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "enterprise value ebitda quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "enterprise value ebitda relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "value ebitda relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "value ebitda percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.trailing_forward_pe_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "trailingForwardPeRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trailing forward pe ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trailingForwardPeRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pe ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "forward pe ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "trailing forward pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "trailing forward pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "trailing forward pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "trailing forward pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "forward pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "forward pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "forward pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "forward pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.trailing_market_cap": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "trailingMarketCap"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trailing market cap": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trailingMarketCap": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cap": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "market cap": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "trailing market lid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing market cover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing market top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing market stopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing market plug": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "market lid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market cover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market stopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market plug": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.trailing_enterprise_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "trailingEnterpriseValue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trailing enterprise value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trailingEnterpriseValue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprise value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "trailing enterprise assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "enterprise assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "trailing enterprise worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing enterprise price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing enterprise cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing enterprise charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing enterprise rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "enterprise worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "enterprise price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.trailing_peg_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "trailingPegRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trailing peg ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trailingPegRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "peg ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "trailing peg relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing peg percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing peg quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing peg relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "peg relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peg percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peg quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peg relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "trailing peg proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing peg share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.trailing_pe_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "trailingPeRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trailing pe ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trailingPeRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pe ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "trailing pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "trailing pe proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing pe share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.trailing_enterprises_value_revenue_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "trailingEnterprisesValueRevenueRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trailing enterprises value revenue ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trailing enterprise value revenue ratio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "trailingEnterprisesValueRevenueRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "revenue ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "value revenue ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprises value revenue ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprise value revenue ratio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        },
+			        {
+			          "trailing enterprise value income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "enterprise value income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "value income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "trailing enterprise value profit ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "trailing enterprise value turnover ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "trailing enterprise value yield ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "enterprise value profit ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "enterprise value turnover ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "enterprise value yield ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.trailing_pb_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "trailingPbRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trailing pb ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trailingPbRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "trailing pb relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing pb percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing pb quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing pb relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing pb proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing pb share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing pb fraction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing pb part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM.trailing_ps_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentalsTTM",
+			          "ConceptualProperty": "trailingPsRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trailing ps ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trailingPsRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ps ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "trailing ps relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing ps percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing ps quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "trailing ps relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ps relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ps percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ps quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ps relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "trailing ps proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "trailing ps share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "d fundamentals 3M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "d fundamental 3M": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "dFundamentals3M": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "3M": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "fundamentals 3M": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "fundamental 3M": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "d_fundamentals_3M.period_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "periodType"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "periodType": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "period category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "period class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.ticker": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "Ticker"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ticker": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.quarterly_pe_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "quarterlyPeRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly pe ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPeRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pe ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "quarterly pe proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly pe share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.quarterly_forward_pe_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "quarterlyForwardPeRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly forward pe ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyForwardPeRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pe ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "forward pe ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly forward pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly forward pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly forward pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly forward pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "forward pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "forward pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "forward pe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "forward pe relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "pe relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.quarterly_peg_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "quarterlyPegRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly peg ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPegRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "peg ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly peg relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly peg percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly peg quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly peg relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "peg relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peg percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peg quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peg relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "quarterly peg proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly peg share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.quarterly_ps_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "quarterlyPsRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly ps ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPsRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ps ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly ps relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly ps percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly ps quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly ps relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ps relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ps percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ps quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ps relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "quarterly ps proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly ps share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.quarterly_market_cap": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "quarterlyMarketCap"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly market cap": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyMarketCap": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cap": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "market cap": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly market lid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly market cover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly market top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly market stopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly market plug": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "market lid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market cover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market stopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "market plug": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.quarterly_enterprises_value_revenue_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "quarterlyEnterprisesValueRevenueRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly enterprises value revenue ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterly enterprise value revenue ratio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "quarterlyEnterprisesValueRevenueRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "revenue ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "value revenue ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprises value revenue ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprise value revenue ratio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        },
+			        {
+			          "quarterly enterprise value income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "enterprise value income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "value income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "quarterly enterprise value profit ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "quarterly enterprise value turnover ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "quarterly enterprise value yield ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "income ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "enterprise value profit ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "enterprise value turnover ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "enterprise value yield ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.quarterly_enterprises_value_EBITDA_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "quarterlyEnterprisesValueEBITDARatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly enterprises value EBITDA ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterly enterprise value EBITDA ratio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "quarterlyEnterprisesValueEBITDARatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "EBITDA ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "value EBITDA ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprises value EBITDA ratio": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprise value EBITDA ratio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        },
+			        {
+			          "quarterly enterprise value ebitda relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quarterly enterprise value ebitda percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quarterly enterprise value ebitda quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quarterly enterprise value ebitda relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "enterprise value ebitda relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "enterprise value ebitda percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "enterprise value ebitda quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "enterprise value ebitda relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "value ebitda relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "value ebitda percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.quarterly_enterprise_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "quarterlyEnterpriseValue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly enterprise value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyEnterpriseValue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "enterprise value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly enterprise assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "enterprise assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "quarterly enterprise worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly enterprise price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly enterprise cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly enterprise charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly enterprise rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "enterprise worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "enterprise price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M.quarterly_pb_ratio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dFundamentals3M",
+			          "ConceptualProperty": "quarterlyPbRatio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly pb ratio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPbRatio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quarterly pb relation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pb percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pb quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pb relationship": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "quarterly pb proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly pb share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly pb fraction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "quarterly pb part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_pe_ratio_previous": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "PePrevious"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly pe ratio previous": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPeRatioPrevious": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quarterly pe relation previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe percentage previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe quotient previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe relationship previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe proportion previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly pe share previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly pe fraction previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly pe part previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_ps_ratio_previous": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "PsPrevious"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly ps ratio previous": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPsRatioPrevious": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quarterly ps relation previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly ps percentage previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly ps quotient previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly ps relationship previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly ps proportion previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly ps share previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly ps fraction previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly ps part previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_peg_ratio_previous": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "PegPrevious"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly peg ratio previous": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPegRatioPrevious": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quarterly peg relation previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly peg percentage previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly peg quotient previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly peg relationship previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly peg proportion previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly peg share previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly peg fraction previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly peg part previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_pb_ratio_previous": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "PbPrevious"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly pb ratio previous": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPbRatioPrevious": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quarterly pb relation previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pb percentage previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pb quotient previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pb relationship previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pb proportion previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly pb share previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly pb fraction previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly pb part previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_market_cap_previous": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "MarketCapPrevious"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly market cap previous": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyMarketCapPrevious": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quarterly market lid previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly market cover previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly market top previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly market stopper previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly market plug previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly market restraint previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "quarterly market restriction previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "quarterly market threshold previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "quarterly market limit previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "quarterly market control previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_forward_pe_ratio_previous": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "ForwardPePrevious"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly forward pe ratio previous": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyForwardPeRatioPrevious": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quarterly forward pe relation previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quarterly forward pe percentage previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quarterly forward pe quotient previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quarterly forward pe relationship previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quarterly forward pe proportion previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "quarterly forward pe share previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "quarterly forward pe fraction previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "quarterly forward pe part previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_enterprise_value_previous": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "EnterpriseValuePrevious"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly enterprise value previous": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyEnterpriseValuePrevious": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "quarterly enterprise assessment previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly enterprise worth previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly enterprise price previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly enterprise cost previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly enterprise charge previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly enterprise rate previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "quarterly enterprise importance previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "quarterly enterprise significance previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "quarterly enterprise usefulness previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "quarterly enterprise consequence previous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_enterprises_value_EBITDA_ratio_previous": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "EnterprisesValueEBITDAPrevious"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly enterprises value EBITDA ratio previous": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyEnterprisesValueEBITDARatioPrevious": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.quarterly_pe_ratio_change": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "PeChange"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarterly pe ratio change": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarterlyPeRatioChange": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "change": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ratio change": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pe ratio change": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "quarterly pe ratio alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe ratio modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe ratio variation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe ratio transformation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe ratio revolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe ratio conversion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe ratio adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "quarterly pe ratio amendment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "pe ratio alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "pe ratio modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "d_fundamentals_3M_has_entity__measure_quarterly_enterprise_value_previous": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_enterprise_value_previous": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_enterprise_value_previous"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_enterprise_value_previous"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_enterprise_value_previous"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_forward_pe_ratio_previous": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_forward_pe_ratio_previous": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_forward_pe_ratio_previous"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_forward_pe_ratio_previous"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_forward_pe_ratio_previous"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_market_cap_previous": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_market_cap_previous": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_market_cap_previous"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_market_cap_previous"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_market_cap_previous"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_pb_ratio_previous": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_pb_ratio_previous": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_pb_ratio_previous"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_pb_ratio_previous"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_pb_ratio_previous"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_peg_ratio_previous": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_peg_ratio_previous": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_peg_ratio_previous"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_peg_ratio_previous"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_peg_ratio_previous"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_ps_ratio_previous": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_ps_ratio_previous": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_ps_ratio_previous"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_ps_ratio_previous"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_ps_ratio_previous"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_pe_ratio_previous": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_pe_ratio_previous": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_pe_ratio_previous"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_pe_ratio_previous"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_pe_ratio_previous"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_quarterly_pb_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.quarterly_pb_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.quarterly_pb_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.quarterly_pb_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_pb_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_quarterly_enterprise_value": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.quarterly_enterprise_value": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.quarterly_enterprise_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.quarterly_enterprise_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_enterprise_values"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_quarterly_enterprises_value_EBITDA_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.quarterly_enterprises_value_EBITDA_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.quarterly_enterprises_value_EBITDA_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.quarterly_enterprises_value_EBITDA_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_enterprises_value_EBITDA_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_quarterly_enterprises_value_revenue_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.quarterly_enterprises_value_revenue_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.quarterly_enterprises_value_revenue_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.quarterly_enterprises_value_revenue_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_enterprises_value_revenue_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_quarterly_market_cap": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.quarterly_market_cap": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.quarterly_market_cap"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.quarterly_market_cap"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_market_caps"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_quarterly_ps_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.quarterly_ps_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.quarterly_ps_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.quarterly_ps_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_ps_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_quarterly_peg_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.quarterly_peg_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.quarterly_peg_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.quarterly_peg_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_peg_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_quarterly_forward_pe_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.quarterly_forward_pe_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.quarterly_forward_pe_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.quarterly_forward_pe_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_forward_pe_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_quarterly_pe_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.quarterly_pe_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.quarterly_pe_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.quarterly_pe_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_pe_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_period_type": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.period_type": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.period_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.period_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_period_types"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_fundamentals_3M.date": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_dates"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_trailing_ps_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.trailing_ps_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.trailing_ps_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.trailing_ps_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_trailing_ps_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_trailing_pb_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.trailing_pb_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.trailing_pb_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.trailing_pb_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_trailing_pb_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_trailing_enterprises_value_revenue_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.trailing_enterprises_value_revenue_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.trailing_enterprises_value_revenue_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.trailing_enterprises_value_revenue_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_trailing_enterprises_value_revenue_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_trailing_pe_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.trailing_pe_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.trailing_pe_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.trailing_pe_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_trailing_pe_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_trailing_peg_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.trailing_peg_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.trailing_peg_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.trailing_peg_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_trailing_peg_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_trailing_enterprise_value": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.trailing_enterprise_value": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.trailing_enterprise_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.trailing_enterprise_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_trailing_enterprise_values"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_trailing_market_cap": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.trailing_market_cap": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.trailing_market_cap"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.trailing_market_cap"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_trailing_market_caps"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_trailing_forward_pe_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.trailing_forward_pe_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.trailing_forward_pe_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.trailing_forward_pe_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_trailing_forward_pe_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_trailing_enterprises_value_EBITDA_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.trailing_enterprises_value_EBITDA_ratio": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.trailing_enterprises_value_EBITDA_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.trailing_enterprises_value_EBITDA_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_trailing_enterprises_value_EBITDA_ratios"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_period_type": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.period_type": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.period_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.period_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_period_types"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_fundamentals_TTM.date": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_dates"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_pb_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_pb_ratio": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_pb_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_pb_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_pb_ratio"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_enterprise_value": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_enterprise_value": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_enterprise_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_enterprise_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_enterprise_value"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_enterprises_value_EBITDA_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_enterprises_value_EBITDA_ratio": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_enterprises_value_EBITDA_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_enterprises_value_EBITDA_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_enterprises_value_EBITDA_ratio"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_enterprises_value_revenue_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_enterprises_value_revenue_ratio": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_enterprises_value_revenue_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_enterprises_value_revenue_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_enterprises_value_revenue_ratio"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_market_cap": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_market_cap": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_market_cap"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_market_cap"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_market_cap"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_ps_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_ps_ratio": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_ps_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_ps_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_ps_ratio"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_peg_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_peg_ratio": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_peg_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_peg_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_peg_ratio"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_forward_pe_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_forward_pe_ratio": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_forward_pe_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_forward_pe_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_forward_pe_ratio"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_entity__measure_quarterly_pe_ratio": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "entity__measure.quarterly_pe_ratio": {
+			          "Target": {
+			            "Entity": "entity__measure.quarterly_pe_ratio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.quarterly_pe_ratio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_quarterly_pe_ratio"
+			        }
+			      ]
+			    },
+			    "d_ticker_has_name": {
+			      "Binding": {
+			        "ConceptualEntity": "dTickers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_ticker": {
+			          "Target": {
+			            "Entity": "d_ticker"
+			          }
+			        },
+			        "d_ticker.name": {
+			          "Target": {
+			            "Entity": "d_ticker.name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_ticker"
+			            },
+			            "Object": {
+			              "Role": "d_ticker.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_tickers_have_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "d_ticker"
+			            },
+			            "Name": {
+			              "Role": "d_ticker.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "names_are_names_IDs_of_d_tickers"
+			        }
+			      ]
+			    },
+			    "fact_indicator_has_entity__measure_price_change_relative": {
+			      "Binding": {
+			        "ConceptualEntity": "factIndicators"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_indicator": {
+			          "Target": {
+			            "Entity": "fact_indicator"
+			          }
+			        },
+			        "entity__measure.price_change_relative": {
+			          "Target": {
+			            "Entity": "entity__measure.price_change_relative"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_indicator"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.price_change_relative"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_indicators_have_price_change_relative"
+			        }
+			      ]
+			    },
+			    "fact_indicator_has_entity__measure_price_change": {
+			      "Binding": {
+			        "ConceptualEntity": "factIndicators"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_indicator": {
+			          "Target": {
+			            "Entity": "fact_indicator"
+			          }
+			        },
+			        "entity__measure.price_change": {
+			          "Target": {
+			            "Entity": "entity__measure.price_change"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_indicator"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.price_change"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_indicators_have_price_change"
+			        }
+			      ]
+			    },
 			    "days_moving_average_parameter_has_day": {
 			      "Binding": {
 			        "ConceptualEntity": "DaysMovingAverageParameter"
@@ -6392,66 +12904,53 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "d_ticker_is_named_name": {
+			    "d_fundamentals_3M_has_entity__measure_quarterly_enterprises_value_EBITDA_ratio_previous": {
 			      "Binding": {
-			        "ConceptualEntity": "dTickers"
+			        "ConceptualEntity": "dFundamentals3M"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_ticker": {
+			        "d_fundamentals_3M": {
 			          "Target": {
-			            "Entity": "d_ticker"
+			            "Entity": "d_fundamentals_3M"
 			          }
 			        },
-			        "d_ticker.name": {
+			        "entity__measure.quarterly_enterprises_value_EBITDA_ratio_previous": {
 			          "Target": {
-			            "Entity": "d_ticker.name"
+			            "Entity": "entity__measure.quarterly_enterprises_value_EBITDA_ratio_previous"
 			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "d_ticker"
-			            },
-			            "Name": {
-			              "Role": "d_ticker.name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "names_are_names_IDs_of_d_tickers"
-			        },
-			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_ticker"
+			              "Role": "d_fundamentals_3M"
 			            },
 			            "Object": {
-			              "Role": "d_ticker.name"
+			              "Role": "entity__measure.quarterly_enterprises_value_EBITDA_ratio_previous"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "d_tickers_have_names"
+			          "ID": "d_fundamentals_3M_have_quarterly_enterprises_value_EBITDA_ratio_previous"
 			        }
 			      ]
 			    },
-			    "fact_indicator_has_entity__measure_price_change": {
+			    "d_fundamentals_3M_has_entity__measure_quarterly_pe_ratio_change": {
 			      "Binding": {
-			        "ConceptualEntity": "factIndicators"
+			        "ConceptualEntity": "dFundamentals3M"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_indicator": {
+			        "d_fundamentals_3M": {
 			          "Target": {
-			            "Entity": "fact_indicator"
+			            "Entity": "d_fundamentals_3M"
 			          }
 			        },
-			        "entity__measure.price_change": {
+			        "entity__measure.quarterly_pe_ratio_change": {
 			          "Target": {
-			            "Entity": "entity__measure.price_change"
+			            "Entity": "entity__measure.quarterly_pe_ratio_change"
 			          }
 			        }
 			      },
@@ -6459,48 +12958,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_indicator"
+			              "Role": "d_fundamentals_3M"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.price_change"
+			              "Role": "entity__measure.quarterly_pe_ratio_change"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_indicators_have_price_change"
-			        }
-			      ]
-			    },
-			    "fact_indicator_has_entity__measure_price_change_relative": {
-			      "Binding": {
-			        "ConceptualEntity": "factIndicators"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_indicator": {
-			          "Target": {
-			            "Entity": "fact_indicator"
-			          }
-			        },
-			        "entity__measure.price_change_relative": {
-			          "Target": {
-			            "Entity": "entity__measure.price_change_relative"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_indicator"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.price_change_relative"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_indicators_have_price_change_relative"
+			          "ID": "d_fundamentals_3M_have_quarterly_pe_ratio_change"
 			        }
 			      ]
 			    },
@@ -6600,6 +13066,112 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "calendars_have_fact_indicators"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_TTM_has_d_ticker": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentalsTTM"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_TTM": {
+			          "Target": {
+			            "Entity": "d_fundamentals_TTM"
+			          }
+			        },
+			        "d_ticker": {
+			          "Target": {
+			            "Entity": "d_ticker"
+			          },
+			          "Nouns": [
+			            {
+			              "ticker": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_TTM"
+			            },
+			            "Object": {
+			              "Role": "d_ticker"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_TTMs_have_d_tickers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_ticker"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_TTM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_tickers_have_d_fundamentals_TTMs"
+			        }
+			      ]
+			    },
+			    "d_fundamentals_3M_has_d_ticker": {
+			      "Binding": {
+			        "ConceptualEntity": "dFundamentals3M"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_fundamentals_3M": {
+			          "Target": {
+			            "Entity": "d_fundamentals_3M"
+			          }
+			        },
+			        "d_ticker": {
+			          "Target": {
+			            "Entity": "d_ticker"
+			          },
+			          "Nouns": [
+			            {
+			              "ticker": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_fundamentals_3M"
+			            },
+			            "Object": {
+			              "Role": "d_ticker"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_fundamentals_3M_have_d_tickers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_ticker"
+			            },
+			            "Object": {
+			              "Role": "d_fundamentals_3M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_tickers_have_d_fundamentals_3M"
 			        }
 			      ]
 			    }

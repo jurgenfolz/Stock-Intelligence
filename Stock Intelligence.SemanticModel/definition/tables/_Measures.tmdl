@@ -144,121 +144,335 @@ table _Measures
 		displayFolder: Basic metrics
 		lineageTag: 5473e64f-549e-4655-9299-d1b94235d2f9
 
-	measure quarterlyPeRatio =
+	/// "Quarterly P/E Ratio" compares a stock's recent price/earnings multiple.
+	measure Pe = ```
 			
-			/* The “Quarterly P/E Ratio” measure calculates the average of the 'quarterlyPeRatio' column
-			   for the current filter context (e.g., date, ticker).
-			   "P/E Ratio" compares the stock's price to its quarterly earnings per share,
-			   reflecting how much investors are paying for each dollar of quarterly earnings.
-			   Using AVERAGE() is consistent with ratio-based metrics if multiple rows
-			   exist for the same date/ticker. Otherwise, AVERAGE() = that value. */
-			AVERAGE('dFundamentals3M'[quarterlyPeRatio])
+			// "Quarterly P/E Ratio (Current)" compares a stock's recent price/earnings multiple.
+			VAR CurrentDate = MAX('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyPeRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = CurrentDate)
+			)
+			
+			```
 		displayFolder: Metrics 3M
 		lineageTag: 09f5ece3-493a-4133-aa90-239ff648bef9
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure quarterlyForwardPeRatio =
+	/// The “Quarterly Forward P/E Ratio” uses projected (forecasted) quarterly earnings instead of historical data,
+	/// offering a forward-looking valuation multiple.
+	measure ForwardPe =
 			
-			/* The “Quarterly Forward P/E Ratio” measure calculates the average of the 'quarterlyForwardPeRatio' column
-			   for the current filter context (e.g., date, ticker).
-			   "Forward P/E Ratio" uses projected (forecasted) quarterly earnings instead of historical data,
-			   offering a forward-looking valuation multiple.
-			   Using AVERAGE() helps if multiple rows exist for the same context. */
-			AVERAGE('dFundamentals3M'[quarterlyForwardPeRatio])
+			/* The “Quarterly Forward P/E Ratio” uses projected (forecasted) quarterly earnings instead of historical data,
+			   offering a forward-looking valuation multiple.*/
+			VAR CurrentDate = MAX('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyForwardPeRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = CurrentDate)
+			)
 		displayFolder: Metrics 3M
 		lineageTag: 8235a8f6-0f40-4d99-8063-0a353b750d83
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure quarterlyPegRatio =
+	/// "PEG" (Price/Earnings to Growth) compares the P/E ratio to the company's quarterly earnings growth, aiming to provide a more growth-adjusted valuation view.
+	measure Peg =
 			
-			/* The “Quarterly PEG Ratio” measure calculates the average of the 'quarterlyPegRatio' column
-			   for the current filter context.
-			   "PEG" (Price/Earnings to Growth) compares the P/E ratio to the company's quarterly earnings growth,
-			   aiming to provide a more growth-adjusted valuation view.
-			   Using AVERAGE() is reasonable if you have multiple rows per date/ticker. */
-			AVERAGE('dFundamentals3M'[quarterlyPegRatio])
+			// "PEG" (Price/Earnings to Growth) compares the P/E ratio to the company's quarterly earnings growth, aiming to provide a more growth-adjusted valuation view.
+			VAR CurrentDate = MAX('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyPegRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = CurrentDate)
+			)
 		displayFolder: Metrics 3M
 		lineageTag: 4f295397-261f-4125-9ab2-3c562e4ac424
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure quarterlyPsRatio =
+	/// Price-to-Sales" compares the stock's price to its quarterly revenue (on a per-share basis).
+	measure Ps =
 			
-			/* The “Quarterly P/S Ratio” measure calculates the average of the 'quarterlyPsRatio' column
-			   for the current filter context.
-			   "Price-to-Sales" compares the stock's price to its quarterly revenue (on a per-share basis).
-			   Using AVERAGE() ensures a consistent approach if multiple rows exist. */
-			AVERAGE('dFundamentals3M'[quarterlyPsRatio])
+			// Price-to-Sales" compares the stock's price to its quarterly revenue (on a per-share basis).
+			VAR CurrentDate = MAX('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyPsRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = CurrentDate)
+			)
 		displayFolder: Metrics 3M
 		lineageTag: ba123e6e-8d61-46cc-badb-09b0fa0f17fe
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure quarterlyMarketCap =
+	/// "Market Cap" represents the total value of all a company's shares.
+	measure MarketCap =
 			
-			/* The “Quarterly Market Cap” measure calculates the average of the 'quarterlyMarketCap' column
-			   for the current filter context.
-			   "Market Cap" represents the total value of all a company's shares.
-			   Since Market Cap is often reported as a single figure per quarter,
-			   AVERAGE() can work if there are multiple rows, otherwise it returns the single available value. */
-			AVERAGE('dFundamentals3M'[quarterlyMarketCap])
-		formatString: #,0
+			// "Market Cap" represents the total value of all a company's shares.
+			VAR CurrentDate = MAX('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyMarketCap]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = CurrentDate)
+			)
+		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Metrics 3M
 		lineageTag: 55c09ac8-9c6a-45ff-ad13-89c0159a2748
 
-		annotation PBI_FormatHint = {"isDecimal":true}
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure quarterlyEnterprisesValueRevenueRatio =
+	measure EnterprisesValueRevenue =
 			
-			/* The “Quarterly EV/Revenue Ratio” measure calculates the average of the 'quarterlyEnterprisesValueRevenueRatio' column
-			   for the current filter context.
-			   "EV/Revenue" divides Enterprise Value by quarterly revenue, indicating how much investors pay per dollar of sales.
-			   Using AVERAGE() is consistent for ratio metrics if duplicates exist. */
-			AVERAGE('dFundamentals3M'[quarterlyEnterprisesValueRevenueRatio])
+			// "EV/Revenue" divides Enterprise Value by quarterly revenue, indicating how much investors pay per dollar of sales.
+			VAR CurrentDate = MAX('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyEnterprisesValueRevenueRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = CurrentDate)
+			)
 		displayFolder: Metrics 3M
 		lineageTag: 5c55c4da-b879-4e62-8a86-249583730b7a
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure quarterlyEnterprisesValueEBITDARatio =
+	/// This ratio divides Enterprise Value by quarterly EBITDA, a common measure of operating performance,to show how the market values the company relative to its earnings potential.
+	measure EnterprisesValueEBITDA =
 			
-			/* The “Quarterly EV/EBITDA Ratio” measure calculates the average of the 'quarterlyEnterprisesValueEBITDARatio' column
-			   for the current filter context.
-			   This ratio divides Enterprise Value by quarterly EBITDA, a common measure of operating performance,
-			   to show how the market values the company relative to its earnings potential.
-			   Using AVERAGE() is appropriate for multiple rows in the same context. */
-			AVERAGE('dFundamentals3M'[quarterlyEnterprisesValueEBITDARatio])
+			//This ratio divides Enterprise Value by quarterly EBITDA, a common measure of operating performance,to show how the market values the company relative to its earnings potential.
+			VAR CurrentDate = MAX('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyEnterprisesValueEBITDARatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = CurrentDate)
+			)
 		displayFolder: Metrics 3M
 		lineageTag: 63e3f31d-8199-4c43-8040-6a125f080d16
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure quarterlyEnterpriseValue = ```
+	/// Enterprise Value (EV) is a measure of a company's total value, incorporating market cap plus debt, minus cash.
+	measure EnterpriseValue = ```
 			
-			/* The “Quarterly Enterprise Value” measure calculates the average of the 'quarterlyEnterpriseValue' column
-			   for the current filter context.
-			   Enterprise Value (EV) is a measure of a company's total value, incorporating market cap plus debt, minus cash.
-			   AVERAGE() can be used if there are duplicate rows for the same date/ticker. */
-			AVERAGE('dFundamentals3M'[quarterlyEnterpriseValue])
+			// Enterprise Value (EV) is a measure of a company's total value, incorporating market cap plus debt, minus cash.
+			VAR CurrentDate = MAX('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyEnterpriseValue]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = CurrentDate)
+			)
 			
 			```
+		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Metrics 3M
 		lineageTag: 9b076b16-97df-469c-ae94-e865ed61115a
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure quarterlyPbRatio =
+	/// "Price-to-Book" compares the stock's price per share to its book value per share, indicating how the market values the company's assets relative to its share price.
+	measure Pb =
 			
-			/* The “Quarterly P/B Ratio” measure calculates the average of the 'quarterlyPbRatio' column
-			   for the current filter context.
-			   "Price-to-Book" compares the stock's price per share to its book value per share, indicating
-			   how the market values the company's assets relative to its share price.
-			   Using AVERAGE() is consistent with other ratio metrics if multiple rows exist. */
-			AVERAGE('dFundamentals3M'[quarterlyPbRatio])
+			// "Price-to-Book" compares the stock's price per share to its book value per share, indicating how the market values the company's assets relative to its share price.
+			VAR CurrentDate = MAX('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyPbRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = CurrentDate)
+			)
 		displayFolder: Metrics 3M
 		lineageTag: 8b283b58-df61-4e7a-85c2-c95fb29b5e63
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Quarterly P/E Ratio" compares a stock's recent price/earnings multiple.
+	measure PePrevious =
+			
+			VAR PreviousDate = Min('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyPeRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = PreviousDate)
+			)
+		displayFolder: Metrics 3M
+		lineageTag: 016fee6a-adb6-4b7b-b5e4-dae0c2e1304e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Price-to-Sales" compares the stock's price to its quarterly revenue (on a per-share basis).
+	measure PsPrevious = ```
+			
+			VAR PreviousDate = MIN('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyPsRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = PreviousDate)
+			)
+			
+			```
+		displayFolder: Metrics 3M
+		lineageTag: 293ed32c-3931-4a77-b648-6516c01b208a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "PEG" (Price/Earnings to Growth) compares the P/E ratio to the company's quarterly earnings growth, aiming to provide a more growth-adjusted valuation view.
+	measure PegPrevious =
+			
+			VAR PreviousDate = MIN('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyPegRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = PreviousDate)
+			)
+		displayFolder: Metrics 3M
+		lineageTag: c813a347-0904-4cec-8296-b353ae49454b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Price-to-Book" compares the stock's price per share to its book value per share, indicating how the market values the company's assets relative to its share price.
+	measure PbPrevious = ```
+			
+			VAR PreviousDate = MIN('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyPbRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = PreviousDate)
+			)
+			
+			```
+		displayFolder: Metrics 3M
+		lineageTag: cca3f2eb-7ce2-4467-a939-93dde6b9b7ff
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Market Cap" represents the total value of all a company's shares.
+	measure MarketCapPrevious = ```
+			
+			VAR PreviousDate = MIN('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyMarketCap]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = PreviousDate)
+			)
+			
+			```
+		displayFolder: Metrics 3M
+		lineageTag: 259d3400-42ca-461f-ac5f-9f8189ed273d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// The “Quarterly Forward P/E Ratio” uses projected (forecasted) quarterly earnings instead of historical data,
+	/// offering a forward-looking valuation multiple.
+	measure ForwardPePrevious = ```
+			
+			VAR PreviousDate = MIN('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyForwardPeRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = PreviousDate)
+			)
+			
+			```
+		displayFolder: Metrics 3M
+		lineageTag: 11eb319c-0731-467f-a0fc-8898d3e25c59
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Enterprise Value (EV) is a measure of a company's total value, incorporating market cap plus debt, minus cash.
+	measure EnterpriseValuePrevious = ```
+			
+			VAR PreviousDate = MIN('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyEnterpriseValue]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = PreviousDate)
+			)
+			
+			```
+		displayFolder: Metrics 3M
+		lineageTag: 6d3ee300-0992-44bb-9b01-46ce905a20c9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// This ratio divides Enterprise Value by quarterly EBITDA, a common measure of operating performance,to show how the market values the company relative to its earnings potential.
+	measure EnterprisesValueEBITDAPrevious = ```
+			
+			VAR PreviousDate = MIN('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyEnterprisesValueEBITDARatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = PreviousDate)
+			)
+			
+			```
+		displayFolder: Metrics 3M
+		lineageTag: 1af396db-6519-48f1-8301-d6bb8c4171e0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PeChange = [Pe]-[PePrevious]
+		displayFolder: Metrics 3M
+		lineageTag: f0daffb3-deed-4e84-9d7e-ca7e3c87a6d3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PsChange = [Ps] - [PsPrevious]
+		displayFolder: Metrics 3M
+		lineageTag: f16c6949-2eec-4ea0-a6ab-84f8eb6aea22
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PegChange = [Peg] -[PegPrevious]
+		displayFolder: Metrics 3M
+		lineageTag: b9ace433-5527-4c47-8ba7-f331243c126a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PbChange = [Pb] - [PbPrevious]
+		displayFolder: Metrics 3M
+		lineageTag: 048d079f-7120-4245-b4b7-2b141bac9f11
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure EnterprisesValueEBITDAChange = [EnterprisesValueEBITDA]-[EnterprisesValueEBITDAPrevious]
+		displayFolder: Metrics 3M
+		lineageTag: 9508c2a2-16a2-417a-bdfc-67c8a8dce804
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure EnterprisesValueRevenuePrevious =
+			
+			VAR PreviousDate = MIN('dFundamentals3M'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentals3M'[quarterlyEnterprisesValueRevenueRatio]),
+			    KEEPFILTERS('dFundamentals3M'[Date] = PreviousDate)
+			)
+		displayFolder: Metrics 3M
+		lineageTag: d9a3f7a2-43f4-4407-a536-4590b33a2dfe
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure EnterprisesValueRevenueChange = [EnterprisesValueRevenue]-[EnterprisesValueRevenuePrevious]
+		displayFolder: Metrics 3M
+		lineageTag: 64af1225-c8f8-4e3d-a392-975aa25e14d4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ForwardPeChange = [ForwardPe]-[ForwardPePrevious]
+		displayFolder: Metrics 3M
+		lineageTag: a8d959b7-4ce4-42ec-b810-bb55da070574
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure EnterpriseValueChange = [EnterpriseValue]-[EnterpriseValuePrevious]
+		displayFolder: Metrics 3M
+		lineageTag: d69a38b1-76b5-4801-a761-00f27454ccf7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure MarketCapChange = [MarketCap]-[MarketCapPrevious]
+		displayFolder: Metrics 3M
+		lineageTag: ef0b0dba-e0ec-4d7f-ba4c-fabbb8f8e294
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

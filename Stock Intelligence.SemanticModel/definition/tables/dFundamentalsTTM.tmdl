@@ -120,6 +120,7 @@ table dFundamentalsTTM
 
 	partition dFundamentalsTTM = m
 		mode: import
+		queryGroup: 'Dimension Tables'
 		source =
 				let
 				    Source = dFundamentals,

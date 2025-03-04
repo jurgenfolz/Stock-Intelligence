@@ -182,6 +182,7 @@ expression dFundamentals = ```
 		    #"Removed Other Columns"
 		```
 	lineageTag: 75a3d5a5-4f48-4630-af7b-f38116606ca0
+	queryGroup: 'Dimension Tables'
 
 	annotation PBI_NavigationStepName = Navigation
 

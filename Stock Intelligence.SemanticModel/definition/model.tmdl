@@ -11,6 +11,14 @@ queryGroup Parameters
 
 	annotation PBI_QueryGroupOrder = 0
 
+queryGroup 'Fact Tables'
+
+	annotation PBI_QueryGroupOrder = 1
+
+queryGroup 'Dimension Tables'
+
+	annotation PBI_QueryGroupOrder = 2
+
 annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.140.1205.0 (25.02)+2ab3defe107764e1cf486b42122d9362df7f34ea
@@ -26,7 +34,6 @@ ref table Calendar
 ref table DaysMovingAverageParameter
 ref table dFundamentalsTTM
 ref table dFundamentals3M
-ref table 'Time Comparison'
 
 ref cultureInfo en-US
 
