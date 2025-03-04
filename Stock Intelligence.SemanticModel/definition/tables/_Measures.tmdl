@@ -153,6 +153,7 @@ table _Measures
 			   Using AVERAGE() is consistent with ratio-based metrics if multiple rows
 			   exist for the same date/ticker. Otherwise, AVERAGE() = that value. */
 			AVERAGE('dFundamentals3M'[quarterlyPeRatio])
+		displayFolder: Metrics 3M
 		lineageTag: 09f5ece3-493a-4133-aa90-239ff648bef9
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -165,6 +166,7 @@ table _Measures
 			   offering a forward-looking valuation multiple.
 			   Using AVERAGE() helps if multiple rows exist for the same context. */
 			AVERAGE('dFundamentals3M'[quarterlyForwardPeRatio])
+		displayFolder: Metrics 3M
 		lineageTag: 8235a8f6-0f40-4d99-8063-0a353b750d83
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -177,6 +179,7 @@ table _Measures
 			   aiming to provide a more growth-adjusted valuation view.
 			   Using AVERAGE() is reasonable if you have multiple rows per date/ticker. */
 			AVERAGE('dFundamentals3M'[quarterlyPegRatio])
+		displayFolder: Metrics 3M
 		lineageTag: 4f295397-261f-4125-9ab2-3c562e4ac424
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -188,6 +191,7 @@ table _Measures
 			   "Price-to-Sales" compares the stock's price to its quarterly revenue (on a per-share basis).
 			   Using AVERAGE() ensures a consistent approach if multiple rows exist. */
 			AVERAGE('dFundamentals3M'[quarterlyPsRatio])
+		displayFolder: Metrics 3M
 		lineageTag: ba123e6e-8d61-46cc-badb-09b0fa0f17fe
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -200,9 +204,11 @@ table _Measures
 			   Since Market Cap is often reported as a single figure per quarter,
 			   AVERAGE() can work if there are multiple rows, otherwise it returns the single available value. */
 			AVERAGE('dFundamentals3M'[quarterlyMarketCap])
+		formatString: #,0
+		displayFolder: Metrics 3M
 		lineageTag: 55c09ac8-9c6a-45ff-ad13-89c0159a2748
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure quarterlyEnterprisesValueRevenueRatio =
 			
@@ -211,6 +217,7 @@ table _Measures
 			   "EV/Revenue" divides Enterprise Value by quarterly revenue, indicating how much investors pay per dollar of sales.
 			   Using AVERAGE() is consistent for ratio metrics if duplicates exist. */
 			AVERAGE('dFundamentals3M'[quarterlyEnterprisesValueRevenueRatio])
+		displayFolder: Metrics 3M
 		lineageTag: 5c55c4da-b879-4e62-8a86-249583730b7a
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -223,6 +230,7 @@ table _Measures
 			   to show how the market values the company relative to its earnings potential.
 			   Using AVERAGE() is appropriate for multiple rows in the same context. */
 			AVERAGE('dFundamentals3M'[quarterlyEnterprisesValueEBITDARatio])
+		displayFolder: Metrics 3M
 		lineageTag: 63e3f31d-8199-4c43-8040-6a125f080d16
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -236,6 +244,7 @@ table _Measures
 			AVERAGE('dFundamentals3M'[quarterlyEnterpriseValue])
 			
 			```
+		displayFolder: Metrics 3M
 		lineageTag: 9b076b16-97df-469c-ae94-e865ed61115a
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -248,6 +257,7 @@ table _Measures
 			   how the market values the company's assets relative to its share price.
 			   Using AVERAGE() is consistent with other ratio metrics if multiple rows exist. */
 			AVERAGE('dFundamentals3M'[quarterlyPbRatio])
+		displayFolder: Metrics 3M
 		lineageTag: 8b283b58-df61-4e7a-85c2-c95fb29b5e63
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}

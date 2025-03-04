@@ -1,0 +1,118 @@
+table 'Time Comparison'
+	lineageTag: 881d25d2-4ccb-476e-83fa-81e8fa64c742
+
+	calculationGroup
+
+		calculationItem Current =
+				
+				VAR Ticker =
+				    SELECTEDVALUE('dFundamentals3M'[Ticker])
+				VAR MaxDateForThisTicker =
+				    CALCULATE(
+				        MAX('dFundamentals3M'[Date]),
+				        FILTER(
+				            ALL('dFundamentals3M'),
+				            'dFundamentals3M'[Ticker] = Ticker
+				        )
+				    )
+				RETURN
+				IF(
+				    NOT ISBLANK(MaxDateForThisTicker),
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        KEEPFILTERS('dFundamentals3M'[Date] = MaxDateForThisTicker)
+				    )
+				)
+
+		calculationItem Previous =
+				
+				VAR ThisTicker =
+				    SELECTEDVALUE('dFundamentals3M'[Ticker])
+				VAR MaxDateForThisTicker =
+				    CALCULATE(
+				        MAX('dFundamentals3M'[Date]),
+				        FILTER(
+				            ALL('dFundamentals3M'),
+				            'dFundamentals3M'[Ticker] = ThisTicker
+				        )
+				    )
+				VAR PrevDateForThisTicker =
+				    CALCULATE(
+				        MAX('dFundamentals3M'[Date]),
+				        FILTER(
+				            ALL('dFundamentals3M'),
+				            'dFundamentals3M'[Ticker] = ThisTicker
+				                && 'dFundamentals3M'[Date] < MaxDateForThisTicker
+				        )
+				    )
+				RETURN
+				IF(
+				    NOT ISBLANK(PrevDateForThisTicker),
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        KEEPFILTERS('dFundamentals3M'[Date] = PrevDateForThisTicker)
+				    )
+				)
+
+		calculationItem Change =
+				VAR ThisTicker =
+				    SELECTEDVALUE('dFundamentals3M'[Ticker])
+				
+				//Max date for this ticker
+				VAR MaxDateForThisTicker =
+				    CALCULATE(
+				        MAX('dFundamentals3M'[Date]),
+				        FILTER(
+				            ALL('dFundamentals3M'),
+				            'dFundamentals3M'[Ticker] = ThisTicker
+				        )
+				    )
+				
+				//previous date for this ticker
+				VAR PrevDateForThisTicker =
+				    CALCULATE(
+				        MAX('dFundamentals3M'[Date]),
+				        FILTER(
+				            ALL('dFundamentals3M'),
+				            'dFundamentals3M'[Ticker] = ThisTicker
+				                && 'dFundamentals3M'[Date] < MaxDateForThisTicker
+				        )
+				    )
+				
+				VAR CurrentVal =
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        KEEPFILTERS('dFundamentals3M'[Date] = MaxDateForThisTicker)
+				    )
+				
+				VAR PreviousVal =
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        KEEPFILTERS('dFundamentals3M'[Date] = PrevDateForThisTicker)
+				    )
+				
+				RETURN
+				IF(
+				    ISBLANK(PrevDateForThisTicker) || ISBLANK(PreviousVal),
+				    BLANK(),
+				    CurrentVal - PreviousVal
+				)
+
+	column 'Calculation group column'
+		dataType: string
+		lineageTag: 566963de-5110-4dc9-b020-feb376d811da
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		formatString: 0
+		lineageTag: e4f13495-89c1-4255-95e0-ed397f0caae8
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

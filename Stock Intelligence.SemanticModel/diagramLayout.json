@@ -105,6 +105,18 @@
           },
           "zIndex": 0,
           "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1129,
+            "y": 263.125
+          },
+          "nodeIndex": "Time Comparison",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
