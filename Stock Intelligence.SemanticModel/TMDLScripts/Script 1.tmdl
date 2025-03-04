@@ -1,0 +1,136 @@
+createOrReplace
+
+	table dFundamentals3M
+		lineageTag: e2631038-4f81-4720-aa5f-1c6b6fd860ec
+
+		column Date
+			dataType: dateTime
+			formatString: Long Date
+			lineageTag: 6f678268-89a0-49d0-baa0-29f28aa9ee80
+			summarizeBy: none
+			sourceColumn: Date
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation UnderlyingDateTimeDataType = Date
+
+		column periodType
+			dataType: string
+			lineageTag: 892bcd9e-d807-4ca3-953d-09faf560aadd
+			summarizeBy: none
+			sourceColumn: periodType
+
+			annotation SummarizationSetBy = Automatic
+
+		column Ticker
+			dataType: string
+			lineageTag: 50ebe7d9-ca58-41d8-b057-c710a2653b1a
+			summarizeBy: none
+			sourceColumn: Ticker
+
+			annotation SummarizationSetBy = Automatic
+
+		column quarterlyPeRatio
+			dataType: double
+			lineageTag: 5fc76250-0dea-444f-9e27-b7c380722881
+			summarizeBy: sum
+			sourceColumn: quarterlyPeRatio
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column quarterlyForwardPeRatio
+			dataType: double
+			lineageTag: 38999c0b-b710-47fe-9603-e38204461602
+			summarizeBy: sum
+			sourceColumn: quarterlyForwardPeRatio
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column quarterlyPegRatio
+			dataType: double
+			lineageTag: 63133a39-148c-41f3-a641-bb4b6f682be3
+			summarizeBy: sum
+			sourceColumn: quarterlyPegRatio
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column quarterlyPsRatio
+			dataType: double
+			lineageTag: 939e45ac-82ef-4301-9aeb-54c5dee26a4d
+			summarizeBy: sum
+			sourceColumn: quarterlyPsRatio
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column quarterlyMarketCap
+			dataType: double
+			lineageTag: bc8bb8d2-972b-4c34-88e4-4a5bc7eacbda
+			summarizeBy: sum
+			sourceColumn: quarterlyMarketCap
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column quarterlyEnterprisesValueRevenueRatio
+			dataType: double
+			lineageTag: 0aa0cd3d-a643-4a21-b9af-82a458360d80
+			summarizeBy: sum
+			sourceColumn: quarterlyEnterprisesValueRevenueRatio
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column quarterlyEnterprisesValueEBITDARatio
+			dataType: double
+			lineageTag: e9b8cd0d-418c-416b-9883-4641e5b2a223
+			summarizeBy: sum
+			sourceColumn: quarterlyEnterprisesValueEBITDARatio
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column quarterlyEnterpriseValue
+			dataType: double
+			lineageTag: 2c6a091c-9e40-4853-8cc4-13fafe57f18d
+			summarizeBy: sum
+			sourceColumn: quarterlyEnterpriseValue
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column quarterlyPbRatio
+			dataType: double
+			lineageTag: 055c318e-363b-4540-a334-33252c4c8551
+			summarizeBy: sum
+			sourceColumn: quarterlyPbRatio
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		partition dFundamentals3M = m
+			mode: import
+			source =
+					let
+					    Source = dFundamentals,
+					    #"Filtered Rows" = Table.SelectRows(Source, each ([periodType] = "3M")),
+					    #"Pivoted Column" = Table.Pivot(#"Filtered Rows", List.Distinct(#"Filtered Rows"[metricType]), "metricType", "Raw Value", List.Sum)
+					in
+					    #"Pivoted Column"
+
+		annotation PBI_NavigationStepName = Navigation
+
+		annotation PBI_ResultType = Table
+

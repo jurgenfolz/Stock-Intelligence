@@ -10,48 +10,50 @@
       "nodes": [
         {
           "location": {
-            "x": 892,
-            "y": 864.75
+            "x": 650,
+            "y": 364.75
           },
           "nodeIndex": "dTickers",
           "nodeLineageTag": "73ed73ea-8ba7-42bf-b21b-01591a862ac9",
           "size": {
             "height": 104,
-            "width": 390
+            "width": 169
           },
           "zIndex": 1,
           "expandedHeight": 313
         },
         {
           "location": {
-            "x": 522,
-            "y": 850.75
+            "x": 398,
+            "y": 491.75
           },
           "nodeIndex": "factIndicators",
           "nodeLineageTag": "6a92cfc3-5781-478a-95e0-564e70cc9adc",
           "size": {
-            "height": 248,
-            "width": 234
+            "height": 128,
+            "width": 217
           },
-          "zIndex": 2
+          "zIndex": 2,
+          "expandedHeight": 248
         },
         {
           "location": {
-            "x": 581,
-            "y": 492.75
+            "x": 0,
+            "y": 81.75
           },
           "nodeIndex": "_Measures",
           "nodeLineageTag": "e18fec4d-e6d1-459d-a072-a082425d8b7c",
           "size": {
-            "height": 104,
+            "height": 72,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 3,
+          "expandedHeight": 104
         },
         {
           "location": {
-            "x": 177,
-            "y": 887.25
+            "x": 36,
+            "y": 550.25
           },
           "nodeIndex": "Calendar",
           "nodeLineageTag": "f5618063-a41f-4b73-b950-101e4401f1cd",
@@ -64,29 +66,45 @@
         },
         {
           "location": {
-            "x": 952,
-            "y": 495.25
+            "x": 0,
+            "y": 0
           },
           "nodeIndex": "DaysMovingAverageParameter",
           "nodeLineageTag": "0ff9407e-80ae-452e-ad58-e9e8077a408a",
           "size": {
-            "height": 224,
+            "height": 72,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 224
         },
         {
           "location": {
-            "x": 1155,
-            "y": 343.25
+            "x": 405,
+            "y": 70.125
           },
-          "nodeIndex": "dFundamentals",
-          "nodeLineageTag": "1499683d-38f8-4c4a-b9bb-67be6695aa9b",
+          "nodeIndex": "dFundamentals3M",
+          "nodeLineageTag": "e2631038-4f81-4720-aa5f-1c6b6fd860ec",
           "size": {
-            "height": 248,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 845,
+            "y": 70.125
+          },
+          "nodeIndex": "dFundamentalsTTM",
+          "nodeLineageTag": "9410422e-fd11-4484-ae26-534c52e77992",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
         }
       ],
       "name": "All tables",

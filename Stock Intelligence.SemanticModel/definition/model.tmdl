@@ -14,16 +14,17 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.140.1205.0 (25.02)+2ab3defe107764e1cf486b42122d9362df7f34ea
 
-annotation PBI_QueryOrder = ["factIndicators","PathtoTickersCSV","Interval","Range","dTickers","_Measures","dFundamentals"]
+annotation PBI_QueryOrder = ["factIndicators","PathtoTickersCSV","Interval","Range","dTickers","_Measures","dFundamentals","dFundamentalsTTM","dFundamentals3M"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
 
 ref table dTickers
 ref table factIndicators
 ref table _Measures
 ref table Calendar
 ref table DaysMovingAverageParameter
-ref table dFundamentals
+ref table dFundamentalsTTM
+ref table dFundamentals3M
 
 ref cultureInfo en-US
 

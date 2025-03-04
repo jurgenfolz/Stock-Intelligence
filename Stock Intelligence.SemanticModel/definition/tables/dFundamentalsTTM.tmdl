@@ -1,0 +1,134 @@
+table dFundamentalsTTM
+	lineageTag: 9410422e-fd11-4484-ae26-534c52e77992
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c6244c92-1dc6-4eb8-b020-6e60fc3f06e5
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column periodType
+		dataType: string
+		lineageTag: 26d6c5b3-82e9-4766-9e80-8314001f4901
+		summarizeBy: none
+		sourceColumn: periodType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ticker
+		dataType: string
+		lineageTag: 2e474036-2080-4edd-aaad-c8a7fa1fe216
+		summarizeBy: none
+		sourceColumn: Ticker
+
+		annotation SummarizationSetBy = Automatic
+
+	column trailingEnterprisesValueEBITDARatio
+		dataType: double
+		lineageTag: 60d4561d-17a0-4aa0-b03e-67683648fdfe
+		summarizeBy: sum
+		sourceColumn: trailingEnterprisesValueEBITDARatio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trailingForwardPeRatio
+		dataType: double
+		lineageTag: 3e98d13f-f1bf-45f8-8c9b-44afcce0ab3d
+		summarizeBy: sum
+		sourceColumn: trailingForwardPeRatio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trailingMarketCap
+		dataType: double
+		lineageTag: 479ed35b-6d6f-468b-af67-9bf06837544f
+		summarizeBy: sum
+		sourceColumn: trailingMarketCap
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trailingEnterpriseValue
+		dataType: double
+		lineageTag: 2574e424-dfb1-4ff8-9a54-1b9e10b7a761
+		summarizeBy: sum
+		sourceColumn: trailingEnterpriseValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trailingPegRatio
+		dataType: double
+		lineageTag: 57ae7c81-2a02-445a-8c7f-3465a2ab3c60
+		summarizeBy: sum
+		sourceColumn: trailingPegRatio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trailingPeRatio
+		dataType: double
+		lineageTag: 6e16b356-290f-4b28-b2ae-a2d8945c046d
+		summarizeBy: sum
+		sourceColumn: trailingPeRatio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trailingEnterprisesValueRevenueRatio
+		dataType: double
+		lineageTag: befb8ef0-0266-4567-ba32-aa94b4edc978
+		summarizeBy: sum
+		sourceColumn: trailingEnterprisesValueRevenueRatio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trailingPbRatio
+		dataType: double
+		lineageTag: f58a5e5c-db80-48f3-b9a5-aff503f9d554
+		summarizeBy: sum
+		sourceColumn: trailingPbRatio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trailingPsRatio
+		dataType: double
+		lineageTag: 9c5decc5-9bf6-426f-9f18-c5dd53b5038b
+		summarizeBy: sum
+		sourceColumn: trailingPsRatio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition dFundamentalsTTM = m
+		mode: import
+		source =
+				let
+				    Source = dFundamentals,
+				    #"Filtered Rows" = Table.SelectRows(Source, each ([periodType] = "TTM")),
+				    #"Pivoted Column" = Table.Pivot(#"Filtered Rows", List.Distinct(#"Filtered Rows"[metricType]), "metricType", "Raw Value", List.Sum)
+				in
+				    #"Pivoted Column"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

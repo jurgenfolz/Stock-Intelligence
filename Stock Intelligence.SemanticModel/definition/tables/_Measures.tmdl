@@ -144,6 +144,114 @@ table _Measures
 		displayFolder: Basic metrics
 		lineageTag: 5473e64f-549e-4655-9299-d1b94235d2f9
 
+	measure quarterlyPeRatio =
+			
+			/* The “Quarterly P/E Ratio” measure calculates the average of the 'quarterlyPeRatio' column
+			   for the current filter context (e.g., date, ticker).
+			   "P/E Ratio" compares the stock's price to its quarterly earnings per share,
+			   reflecting how much investors are paying for each dollar of quarterly earnings.
+			   Using AVERAGE() is consistent with ratio-based metrics if multiple rows
+			   exist for the same date/ticker. Otherwise, AVERAGE() = that value. */
+			AVERAGE('dFundamentals3M'[quarterlyPeRatio])
+		lineageTag: 09f5ece3-493a-4133-aa90-239ff648bef9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure quarterlyForwardPeRatio =
+			
+			/* The “Quarterly Forward P/E Ratio” measure calculates the average of the 'quarterlyForwardPeRatio' column
+			   for the current filter context (e.g., date, ticker).
+			   "Forward P/E Ratio" uses projected (forecasted) quarterly earnings instead of historical data,
+			   offering a forward-looking valuation multiple.
+			   Using AVERAGE() helps if multiple rows exist for the same context. */
+			AVERAGE('dFundamentals3M'[quarterlyForwardPeRatio])
+		lineageTag: 8235a8f6-0f40-4d99-8063-0a353b750d83
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure quarterlyPegRatio =
+			
+			/* The “Quarterly PEG Ratio” measure calculates the average of the 'quarterlyPegRatio' column
+			   for the current filter context.
+			   "PEG" (Price/Earnings to Growth) compares the P/E ratio to the company's quarterly earnings growth,
+			   aiming to provide a more growth-adjusted valuation view.
+			   Using AVERAGE() is reasonable if you have multiple rows per date/ticker. */
+			AVERAGE('dFundamentals3M'[quarterlyPegRatio])
+		lineageTag: 4f295397-261f-4125-9ab2-3c562e4ac424
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure quarterlyPsRatio =
+			
+			/* The “Quarterly P/S Ratio” measure calculates the average of the 'quarterlyPsRatio' column
+			   for the current filter context.
+			   "Price-to-Sales" compares the stock's price to its quarterly revenue (on a per-share basis).
+			   Using AVERAGE() ensures a consistent approach if multiple rows exist. */
+			AVERAGE('dFundamentals3M'[quarterlyPsRatio])
+		lineageTag: ba123e6e-8d61-46cc-badb-09b0fa0f17fe
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure quarterlyMarketCap =
+			
+			/* The “Quarterly Market Cap” measure calculates the average of the 'quarterlyMarketCap' column
+			   for the current filter context.
+			   "Market Cap" represents the total value of all a company's shares.
+			   Since Market Cap is often reported as a single figure per quarter,
+			   AVERAGE() can work if there are multiple rows, otherwise it returns the single available value. */
+			AVERAGE('dFundamentals3M'[quarterlyMarketCap])
+		lineageTag: 55c09ac8-9c6a-45ff-ad13-89c0159a2748
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure quarterlyEnterprisesValueRevenueRatio =
+			
+			/* The “Quarterly EV/Revenue Ratio” measure calculates the average of the 'quarterlyEnterprisesValueRevenueRatio' column
+			   for the current filter context.
+			   "EV/Revenue" divides Enterprise Value by quarterly revenue, indicating how much investors pay per dollar of sales.
+			   Using AVERAGE() is consistent for ratio metrics if duplicates exist. */
+			AVERAGE('dFundamentals3M'[quarterlyEnterprisesValueRevenueRatio])
+		lineageTag: 5c55c4da-b879-4e62-8a86-249583730b7a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure quarterlyEnterprisesValueEBITDARatio =
+			
+			/* The “Quarterly EV/EBITDA Ratio” measure calculates the average of the 'quarterlyEnterprisesValueEBITDARatio' column
+			   for the current filter context.
+			   This ratio divides Enterprise Value by quarterly EBITDA, a common measure of operating performance,
+			   to show how the market values the company relative to its earnings potential.
+			   Using AVERAGE() is appropriate for multiple rows in the same context. */
+			AVERAGE('dFundamentals3M'[quarterlyEnterprisesValueEBITDARatio])
+		lineageTag: 63e3f31d-8199-4c43-8040-6a125f080d16
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure quarterlyEnterpriseValue = ```
+			
+			/* The “Quarterly Enterprise Value” measure calculates the average of the 'quarterlyEnterpriseValue' column
+			   for the current filter context.
+			   Enterprise Value (EV) is a measure of a company's total value, incorporating market cap plus debt, minus cash.
+			   AVERAGE() can be used if there are duplicate rows for the same date/ticker. */
+			AVERAGE('dFundamentals3M'[quarterlyEnterpriseValue])
+			
+			```
+		lineageTag: 9b076b16-97df-469c-ae94-e865ed61115a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure quarterlyPbRatio =
+			
+			/* The “Quarterly P/B Ratio” measure calculates the average of the 'quarterlyPbRatio' column
+			   for the current filter context.
+			   "Price-to-Book" compares the stock's price per share to its book value per share, indicating
+			   how the market values the company's assets relative to its share price.
+			   Using AVERAGE() is consistent with other ratio metrics if multiple rows exist. */
+			AVERAGE('dFundamentals3M'[quarterlyPbRatio])
+		lineageTag: 8b283b58-df61-4e7a-85c2-c95fb29b5e63
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition _Measures = m
 		mode: import
 		source =

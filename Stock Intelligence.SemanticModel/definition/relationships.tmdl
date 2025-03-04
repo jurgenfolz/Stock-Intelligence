@@ -6,7 +6,11 @@ relationship e2f9efff-f8ba-dbfe-047e-73bc8c637f59
 	fromColumn: factIndicators.Date
 	toColumn: Calendar.Date
 
-relationship AutoDetected_92cbf24e-2479-4ada-8c5e-e3f436021625
-	fromColumn: dFundamentals.Ticker
+relationship AutoDetected_27cbec65-ebae-499f-8750-43e20008e8f5
+	fromColumn: dFundamentalsTTM.Ticker
+	toColumn: dTickers.Ticker
+
+relationship AutoDetected_02d4a809-3790-490b-b5cf-66d235b9f762
+	fromColumn: dFundamentals3M.Ticker
 	toColumn: dTickers.Ticker
 
