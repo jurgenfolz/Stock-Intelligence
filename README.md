@@ -1,13 +1,16 @@
 # Stock Intelligence
 
 Do you follow the financial markets and enjoy using Power BI? You’re in the right place. This repo contains a Power BI  report for analyzing stock market data using Yahoo Finance APIs. It can be refreshed anywhere and **does not require an API key**.
-![alt text](Screenshots\mainPage.png)
+![mainPage](https://github.com/user-attachments/assets/5394508e-5992-45eb-8400-151ef649e91d)
+
 
 ## Usage
 
 1. **IMPORTANT: Edit `PathtoTickersCSV`** parameter to point to your local CSV with ticker symbols.
-![alt text](Screenshots\transformData.png)
-![alt text](Screenshots\editPrameters.png)
+![transformData](https://github.com/user-attachments/assets/262c84c4-3a15-480f-a4db-b965517a06cf)
+![editPrameters](https://github.com/user-attachments/assets/72416a42-94d8-44fb-9553-7d85ae79c198)
+
+
 2. **Adjust `Interval` and `Range`** parameters as needed (e.g., `"1d"`, `"1wk"`, `"1mo"`, and ranges like `"1y"`, `"5y"`, etc.).  
 3. **Refresh** the dataset. Power BI will retrieve the data from Yahoo Finance’s unofficial endpoints and populate the tables.
 
