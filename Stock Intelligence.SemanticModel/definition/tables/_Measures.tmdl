@@ -476,7 +476,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// "Trailing P/E Ratio (Current)" measures a company's price-to-earnings multiple 
+	/// "Trailing P/E Ratio (Current)" measures a company's price-to-earnings multiple
 	/// based on the last 12 months.
 	measure trailingPeRatio = ```
 			
@@ -495,7 +495,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// "Trailing P/E Ratio (Current)" measures a company's price-to-earnings multiple 
+	/// "Trailing P/E Ratio (Current)" measures a company's price-to-earnings multiple
 	/// based on the last 12 months.
 	measure trailingPeRatioPrevious = ```
 			
@@ -513,7 +513,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// "Trailing P/E Ratio (Current)" measures a company's price-to-earnings multiple 
+	/// "Trailing P/E Ratio (Current)" measures a company's price-to-earnings multiple
 	/// based on the last 12 months.
 	measure trailingPeRatioChange =
 			
@@ -625,10 +625,9 @@ table _Measures
 			    AVERAGE('dFundamentalsTTM'[trailingEnterpriseValue]),
 			    KEEPFILTERS('dFundamentalsTTM'[Date] = CurrentDate)
 			)
+		formatString: #,0.00
 		displayFolder: Metrics TTM
 		lineageTag: ecc99ab3-0cba-45b5-bd21-2a517bed96e5
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// "Trailing Enterprise Value (Current)" includes market cap plus debt minus cash
 	measure trailingEnterpriseValuePrevious =
@@ -701,7 +700,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth. 
+	/// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth.
 	measure trailingPegRatio = ```
 			
 			// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth. 
@@ -717,7 +716,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth. 
+	/// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth.
 	measure trailingPegRatioPrevious =
 			
 			// "Trailing PEG Ratio (Previous)" references the earliest TTM date for each Ticker,
@@ -733,7 +732,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	/// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth. 
+	/// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth.
 	measure trailingPegRatioChange = ```
 			
 			// "Trailing PEG Ratio (Change)" is the numeric difference between 

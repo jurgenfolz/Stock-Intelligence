@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "e14b624693f47b8f1e3d",
   "position": {
-    "x": 16.985138004246284,
-    "y": 202.46284501061569,
+    "x": 17.156177156177158,
+    "y": 202.14452214452214,
     "z": 7002,
-    "height": 192.27176220806794,
-    "width": 245.9447983014862,
+    "height": 315.52447552447552,
+    "width": 245.4079254079254,
     "tabOrder": 7002
   },
   "visual": {
@@ -169,6 +169,141 @@
               "queryRef": "_Measures.quarterlyMarketCap",
               "nativeQueryRef": "Market Cap",
               "displayName": "Market Cap"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "trailingEnterprisesValueEBITDARatio"
+                }
+              },
+              "queryRef": "_Measures.trailingEnterprisesValueEBITDARatio",
+              "nativeQueryRef": "Trailing EV/EBITDA",
+              "displayName": "Trailing EV/EBITDA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "trailingEnterprisesValueRevenueRatio"
+                }
+              },
+              "queryRef": "_Measures.trailingEnterprisesValueRevenueRatio",
+              "nativeQueryRef": "Trailing EV/Revenue",
+              "displayName": "Trailing EV/Revenue"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "trailingEnterpriseValue"
+                }
+              },
+              "queryRef": "_Measures.trailingEnterpriseValue",
+              "nativeQueryRef": "Trailing EV",
+              "displayName": "Trailing EV"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "trailingForwardPeRatio"
+                }
+              },
+              "queryRef": "_Measures.trailingForwardPeRatio",
+              "nativeQueryRef": "Trailing Foward PE",
+              "displayName": "Trailing Foward PE"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "trailingMarketCap"
+                }
+              },
+              "queryRef": "_Measures.trailingMarketCap",
+              "nativeQueryRef": "Trailing Market Cap",
+              "displayName": "Trailing Market Cap"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "trailingPbRatio"
+                }
+              },
+              "queryRef": "_Measures.trailingPbRatio",
+              "nativeQueryRef": "Trailing PB",
+              "displayName": "Trailing PB"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "trailingPegRatio"
+                }
+              },
+              "queryRef": "_Measures.trailingPegRatio",
+              "nativeQueryRef": "Trailing PEG",
+              "displayName": "Trailing PEG"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "trailingPeRatio"
+                }
+              },
+              "queryRef": "_Measures.trailingPeRatio",
+              "nativeQueryRef": "Trailing PE",
+              "displayName": "Trailing PE"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "trailingPsRatio"
+                }
+              },
+              "queryRef": "_Measures.trailingPsRatio",
+              "nativeQueryRef": "Trailing PS",
+              "displayName": "Trailing PS"
             }
           ]
         }
@@ -1054,6 +1189,285 @@
             ],
             "metadata": "_Measures.quarterlyMarketCap"
           }
+        },
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Before'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Top'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Conditional": {
+                    "Cases": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "_Measures"
+                                  }
+                                },
+                                "Property": "trailingEnterprisesValueEBITDARatioChange"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'TriangleHigh'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "_Measures"
+                                  }
+                                },
+                                "Property": "trailingEnterprisesValueEBITDARatioChange"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'TriangleLow'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Measures.trailingEnterprisesValueEBITDARatio"
+          }
+        },
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Before'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Top'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Conditional": {
+                    "Cases": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "_Measures"
+                                  }
+                                },
+                                "Property": "trailingEnterprisesValueRevenueRatioChange"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'TriangleHigh'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "_Measures"
+                                  }
+                                },
+                                "Property": "trailingEnterprisesValueRevenueRatioChange"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'TriangleLow'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Measures.trailingEnterprisesValueRevenueRatio"
+          }
+        },
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Before'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Top'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Conditional": {
+                    "Cases": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "_Measures"
+                                  }
+                                },
+                                "Property": "trailingEnterpriseValueChange"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'TriangleHigh'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "_Measures"
+                                  }
+                                },
+                                "Property": "trailingEnterpriseValueChange"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'TriangleLow'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Measures.trailingEnterpriseValue"
+          }
         }
       ],
       "columnFormatting": [
@@ -1084,6 +1498,48 @@
           "selector": {
             "metadata": "_Measures.quarterlyMarketCap"
           }
+        },
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000000D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.trailingEnterpriseValue"
+          }
+        },
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000000D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.trailingMarketCap"
+          }
         }
       ],
       "columnWidth": [
@@ -1106,7 +1562,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "71.17249530448841D"
+                  "Value": "84.56664451422489D"
                 }
               }
             }
