@@ -1,6 +1,7 @@
 # Stock Intelligence
 
-Do you follow the financial markets and enjoy using Power BI? You’re in the right place. This repo contains a Power BI  report for analyzing stock market data using Yahoo Finance APIs. It can be refreshed anywhere and **does not require an API key**. 
+Do you follow the financial markets and enjoy using Power BI? You’re in the right place. This repo contains a Power BI  report for analyzing stock market data using Yahoo Finance APIs. It can be refreshed anywhere and **does not require an API key**.
+![alt text](Screenshots\mainPage.png)
 
 ## Usage
 
