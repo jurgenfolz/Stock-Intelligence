@@ -1,0 +1,14 @@
+createOrReplace
+
+	ref table _Measures
+
+		measure ChangeIcon = ```
+				
+				    SWITCH( 
+				        TRUE(),
+				        [PriceChange]<0,"TriangleLow",
+				        [PriceChange]=0,"TriangleMedium",
+				        [PriceChange]>0,"TriangleHigh")
+				```
+			lineageTag: 22393062-f129-48e3-87f7-b223588421c7
+

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "7335727c08f6ced94ec6",
   "position": {
-    "x": 911.789077212806,
-    "y": 89.792843691148775,
+    "x": 869.433962264151,
+    "y": 89.791969037252059,
     "z": 7000,
-    "height": 610.47080979284362,
-    "width": 353.74764595103579,
+    "height": 610.58538945331406,
+    "width": 396.32317368166429,
     "tabOrder": 7000
   },
   "visual": {
@@ -15,6 +15,20 @@
       "queryState": {
         "Values": {
           "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dTickers"
+                    }
+                  },
+                  "Property": "Ticker"
+                }
+              },
+              "queryRef": "dTickers.Ticker",
+              "nativeQueryRef": "Ticker"
+            },
             {
               "field": {
                 "Column": {
@@ -148,90 +162,13 @@
               },
               "value": {
                 "expr": {
-                  "Conditional": {
-                    "Cases": [
-                      {
-                        "Condition": {
-                          "Comparison": {
-                            "ComparisonKind": 1,
-                            "Left": {
-                              "Measure": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Entity": "_Measures"
-                                  }
-                                },
-                                "Property": "PriceChange"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "0D"
-                              }
-                            }
-                          }
-                        },
-                        "Value": {
-                          "Literal": {
-                            "Value": "'TriangleHigh'"
-                          }
-                        }
-                      },
-                      {
-                        "Condition": {
-                          "Comparison": {
-                            "ComparisonKind": 0,
-                            "Left": {
-                              "Measure": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Entity": "_Measures"
-                                  }
-                                },
-                                "Property": "PriceChange"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "0D"
-                              }
-                            }
-                          }
-                        },
-                        "Value": {
-                          "Literal": {
-                            "Value": "'TriangleMedium'"
-                          }
-                        }
-                      },
-                      {
-                        "Condition": {
-                          "Comparison": {
-                            "ComparisonKind": 3,
-                            "Left": {
-                              "Measure": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Entity": "_Measures"
-                                  }
-                                },
-                                "Property": "PriceChange"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "0D"
-                              }
-                            }
-                          }
-                        },
-                        "Value": {
-                          "Literal": {
-                            "Value": "'TriangleLow'"
-                          }
-                        }
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "_Measures"
                       }
-                    ]
+                    },
+                    "Property": "ChangeIcon"
                   }
                 }
               }
@@ -356,53 +293,7 @@
           }
         },
         {
-          "properties": {
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "FillRule": {
-                      "Input": {
-                        "Measure": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "_Measures"
-                            }
-                          },
-                          "Property": "ClosePrice"
-                        }
-                      },
-                      "FillRule": {
-                        "linearGradient2": {
-                          "min": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#f5b0ae'"
-                              }
-                            }
-                          },
-                          "max": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#b4d9b5'"
-                              }
-                            }
-                          },
-                          "nullColoringStrategy": {
-                            "strategy": {
-                              "Literal": {
-                                "Value": "'asZero'"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "data": [
               {

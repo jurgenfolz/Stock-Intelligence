@@ -130,11 +130,9 @@ table _Measures
 			[ClosePrice] - [OpenPrice]
 			
 			```
-		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		displayFolder: Basic metrics
 		lineageTag: da70fdc8-4ffe-46c0-b803-47482fa57513
-
-		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	measure PriceChangeRelative = ```
 			DIVIDE([ClosePrice] - [OpenPrice],[OpenPrice])
@@ -868,6 +866,17 @@ table _Measures
 		lineageTag: 13ce38dd-ceca-48a6-b908-71436104cd95
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ChangeIcon = ```
+			
+			    SWITCH( 
+			        TRUE(),
+			        [PriceChange]<0,"TriangleLow",
+			        [PriceChange]=0,"TriangleMedium",
+			        [PriceChange]>0,"TriangleHigh"
+			    )
+			```
+		lineageTag: 22393062-f129-48e3-87f7-b223588421c7
 
 	partition _Measures = m
 		mode: import
