@@ -21,7 +21,7 @@ queryGroup 'Dimension Tables'
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBIDesktopVersion = 2.140.1205.0 (25.02)+2ab3defe107764e1cf486b42122d9362df7f34ea
+annotation PBIDesktopVersion = 2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a
 
 annotation PBI_QueryOrder = ["factIndicators","PathtoTickersCSV","Interval","Range","dTickers","_Measures","dFundamentals","dFundamentalsTTM","dFundamentals3M"]
 

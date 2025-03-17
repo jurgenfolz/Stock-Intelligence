@@ -476,6 +476,401 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// "Trailing P/E Ratio (Current)" measures a company's price-to-earnings multiple 
+	/// based on the last 12 months.
+	measure trailingPeRatio = ```
+			
+			// "Trailing P/E Ratio (Current)" measures a company's price-to-earnings multiple 
+			// based on the last 12 months. It uses the max date in dFundamentalsTTM.
+			VAR CurrentDate = MAX('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingPeRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = CurrentDate)
+			)
+			
+			```
+		displayFolder: Metrics TTM
+		lineageTag: e1f18d61-0924-49c6-aca9-a2939f0744a8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing P/E Ratio (Current)" measures a company's price-to-earnings multiple 
+	/// based on the last 12 months.
+	measure trailingPeRatioPrevious = ```
+			
+			// "Trailing P/E Ratio (Previous)" calculates the TTM P/E at the min date 
+			// (assuming 2 distinct dates). Useful for comparing change over time.
+			VAR PreviousDate = MIN('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingPeRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = PreviousDate)
+			)
+			```
+		displayFolder: Metrics TTM
+		lineageTag: 55af9b3e-a3ba-4e9c-af1a-d63c7d224932
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing P/E Ratio (Current)" measures a company's price-to-earnings multiple 
+	/// based on the last 12 months.
+	measure trailingPeRatioChange =
+			
+			// "Trailing P/E Ratio (Change)" is the absolute difference between Current and Previous.
+			[trailingPeRatio] - [trailingPeRatioPrevious]
+		displayFolder: Metrics TTM
+		lineageTag: c5d80b7c-b825-43ca-9fdb-7ef6f6ba9752
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing Forward P/E Ratio (Current)" uses projected earnings over a trailing period, capturing future expectations
+	/// 
+	measure trailingForwardPeRatio = ```
+			
+			// "Trailing Forward P/E Ratio (Current)" uses projected earnings over a trailing period, 
+			// capturing future expectations. Applies the max date filter.
+			VAR CurrentDate = MAX('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingForwardPeRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = CurrentDate)
+			)
+			```
+		displayFolder: Metrics TTM
+		lineageTag: b6547bb1-0ba0-4c09-85a2-0e6110689451
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing Forward P/E Ratio (Current)" uses projected earnings over a trailing period, capturing future expectations
+	/// 
+	measure trailingForwardPeRatioPrevious =
+			
+			// "Trailing Forward P/E Ratio (Previous)" at the min date, for comparison against the current forward P/E.
+			VAR PreviousDate = MIN('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingForwardPeRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = PreviousDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: 9c04d926-aa62-4425-92f0-b13d4354948b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing Forward P/E Ratio (Current)" uses projected earnings over a trailing period, capturing future expectations
+	/// 
+	measure trailingForwardPeRatioChange = ```
+			
+			// "Trailing Forward P/E Ratio (Change)" is the absolute difference 
+			// between the current and previous trailing forward P/E.
+			[trailingForwardPeRatio] - [trailingForwardPeRatioPrevious]
+			```
+		displayFolder: Metrics TTM
+		lineageTag: 84b0c536-0ed7-4301-8952-1af4b3d054dd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing Market Cap (Current)" gives the total valuation of a company’s shares over the TTM period
+	measure trailingMarketCap =
+			
+			// "Trailing Market Cap (Current)" gives the total valuation of a company’s shares over the TTM period, using the max date in dFundamentalsTTM.
+			VAR CurrentDate = MAX('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingMarketCap]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = CurrentDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: 6cd1ee08-b51a-434a-97be-62e0c6a2baa8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing Market Cap (Current)" gives the total valuation of a company’s shares over the TTM period
+	measure trailingMarketCapPrevious = ```
+			
+			// "Trailing Market Cap (Previous)" at the min date, to see how 
+			// market valuation changed between two TTM snapshots.
+			VAR PreviousDate = MIN('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingMarketCap]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = PreviousDate)
+			)
+			```
+		displayFolder: Metrics TTM
+		lineageTag: 07b38fc3-9b94-4654-90f1-6e13482afd37
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing Market Cap (Current)" gives the total valuation of a company’s shares over the TTM period
+	measure trailingMarketCapChange = ```
+			
+			// "Trailing Market Cap (Change)" is the difference in market cap 
+			// from the earliest to the latest TTM date.
+			[trailingMarketCap] - [trailingMarketCapPrevious]
+			```
+		displayFolder: Metrics TTM
+		lineageTag: dbaafd76-1f76-4ba5-bdec-5b15a9be4f26
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing Enterprise Value (Current)" includes market cap plus debt minus cash
+	measure trailingEnterpriseValue =
+			
+			// "Trailing Enterprise Value (Current)" includes market cap plus debt minus cash, referencing the last TTM date for each Ticker.
+			VAR CurrentDate = MAX('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingEnterpriseValue]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = CurrentDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: ecc99ab3-0cba-45b5-bd21-2a517bed96e5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing Enterprise Value (Current)" includes market cap plus debt minus cash
+	measure trailingEnterpriseValuePrevious =
+			
+			// "Trailing Enterprise Value (Previous)" for the min date, enabling quarter-to-quarter or period-to-period comparisons within TTM data.
+			VAR PreviousDate = MIN('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingEnterpriseValue]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = PreviousDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: f8a78f0e-0424-4284-96d2-169b87d65720
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing Enterprise Value (Current)" includes market cap plus debt minus cash
+	measure trailingEnterpriseValueChange = ```
+			
+			// "Trailing Enterprise Value (Change)" is the absolute difference 
+			// between Current and Previous TTM EV.
+			[trailingEnterpriseValue] - [trailingEnterpriseValuePrevious]
+			```
+		displayFolder: Metrics TTM
+		lineageTag: 5cc5d9c9-8f85-4cdd-a429-b3cd22093c55
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing EV/EBITDA (Current)" measures Enterprise Value over EBITDA for the trailing 12 months
+	measure trailingEnterprisesValueEBITDARatio =
+			
+			// "Trailing EV/EBITDA (Current)" measures Enterprise Value over EBITDA for the trailing 12 months, referencing the max date in the table.
+			VAR CurrentDate = MAX('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingEnterprisesValueEBITDARatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = CurrentDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: a9846e48-7f30-418b-b2b8-a4f886d850ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing EV/EBITDA (Current)" measures Enterprise Value over EBITDA for the trailing 12 months
+	measure trailingEnterprisesValueEBITDARatioPrevious = ```
+			
+			/* "Trailing EV/EBITDA (Previous)" uses the earliest TTM date per Ticker to show 
+			   how this ratio has changed. */
+			VAR PreviousDate = MIN('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingEnterprisesValueEBITDARatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = PreviousDate)
+			)
+			```
+		displayFolder: Metrics TTM
+		lineageTag: 2b9bd822-6ff5-45cb-9513-e28f2f53d0de
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing EV/EBITDA (Current)" measures Enterprise Value over EBITDA for the trailing 12 months
+	measure trailingEnterprisesValueEBITDARatioChange = ```
+			
+			/* "Trailing EV/EBITDA (Change)" is the difference between the Current 
+			   and Previous TTM EV/EBITDA ratio. */
+			[trailingEnterprisesValueEBITDARatio] - [trailingEnterprisesValueEBITDARatioPrevious]
+			```
+		displayFolder: Metrics TTM
+		lineageTag: 4f52fb99-7bc1-497b-813a-8376281841fc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth. 
+	measure trailingPegRatio = ```
+			
+			// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth. 
+			VAR CurrentDate = MAX('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingPegRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = CurrentDate)
+			)
+			```
+		displayFolder: Metrics TTM
+		lineageTag: c07baad2-1280-4bd0-b8d6-902fb0a00b91
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth. 
+	measure trailingPegRatioPrevious =
+			
+			// "Trailing PEG Ratio (Previous)" references the earliest TTM date for each Ticker,
+			// letting you see how the growth-based valuation changed.
+			VAR PreviousDate = MIN('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingPegRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = PreviousDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: 95512fe3-b2ad-4b1d-ae00-474d14d364a7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing PEG Ratio (Current)" uses TTM data to compare price/earnings to growth. 
+	measure trailingPegRatioChange = ```
+			
+			// "Trailing PEG Ratio (Change)" is the numeric difference between 
+			// the current and previous TTM PEG Ratio.
+			[trailingPegRatio] - [trailingPegRatioPrevious]
+			```
+		displayFolder: Metrics TTM
+		lineageTag: 2e29b67d-94ea-4a1b-ba67-481e2910d320
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing EV/Revenue (Current)" calculates Enterprise Value Revenue for the trailing 12 months
+	measure trailingEnterprisesValueRevenueRatio =
+			
+			// "Trailing EV/Revenue (Current)" calculates Enterprise Value Revenue for the trailing 12 months at the max date.
+			VAR CurrentDate = MAX('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingEnterprisesValueRevenueRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = CurrentDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: 7843c49d-3c98-4a20-bbd1-fd7310905751
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing EV/Revenue (Current)" calculates Enterprise Value Revenue for the trailing 12 months
+	measure trailingEnterprisesValueRevenueRatioPrevious =
+			
+			// "Trailing EV/Revenue (Previous)" uses the min date to see how this valuation metric changed.
+			VAR PreviousDate = MIN('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingEnterprisesValueRevenueRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = PreviousDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: 478e718c-d06a-4bd5-9bcc-226988fba8b3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing EV/Revenue (Current)" calculates Enterprise Value Revenue for the trailing 12 months
+	measure trailingEnterprisesValueRevenueRatioChange = ```
+			
+			// "Trailing EV/Revenue (Change)" is simply the difference 
+			// between the current and previous TTM ratio.
+			[trailingEnterprisesValueRevenueRatio] - [trailingEnterprisesValueRevenueRatioPrevious]
+			```
+		displayFolder: Metrics TTM
+		lineageTag: 02eeaca1-24a7-478c-872a-df1d28a44947
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing P/B Ratio (Current)" for the trailing 12 months
+	measure trailingPbRatio =
+			
+			// "Trailing P/B Ratio (Current)" for the trailing 12 months, referencing the max date in dFundamentalsTTM.
+			VAR CurrentDate = MAX('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingPbRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = CurrentDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: 77bce7f8-aadc-4d66-9d4a-718a7854de99
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing P/B Ratio (Current)" for the trailing 12 months
+	measure trailingPbRatioPrevious =
+			
+			// "Trailing P/B Ratio (Previous)" referencing the min date, letting you see if the company's price-to-book changed significantly over time.
+			VAR PreviousDate = MIN('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingPbRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = PreviousDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: 4a88824c-e5d1-49b9-b81b-be76123ca8b9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing P/B Ratio (Current)" for the trailing 12 months
+	measure trailingPbRatioChange = ```
+			
+			// "Trailing P/B Ratio (Change)" is the absolute difference 
+			// from the earliest to the latest TTM date for each Ticker.
+			[trailingPbRatio] - [trailingPbRatioPrevious]
+			```
+		displayFolder: Metrics TTM
+		lineageTag: f472a77d-4167-47b7-9cb1-759197c1ce7d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing P/S Ratio (Current)" calculates Price-to-Sales using the TTM period
+	measure trailingPsRatio =
+			
+			// "Trailing P/S Ratio (Current)" calculates Price-to-Sales using the TTM period at the max date for each Ticker.
+			VAR CurrentDate = MAX('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingPsRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = CurrentDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: f5a5ef33-b7b6-4f1d-9005-cf48cfbdc8c4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing P/S Ratio (Current)" calculates Price-to-Sales using the TTM period
+	measure trailingPsRatioPrevious =
+			
+			// "Trailing P/S Ratio (Previous)" uses the min date to compare how the P/S changed from earliest to latest TTM date.
+			VAR PreviousDate = MIN('dFundamentalsTTM'[Date])
+			RETURN
+			CALCULATE(
+			    AVERAGE('dFundamentalsTTM'[trailingPsRatio]),
+			    KEEPFILTERS('dFundamentalsTTM'[Date] = PreviousDate)
+			)
+		displayFolder: Metrics TTM
+		lineageTag: 18878fc0-2096-4ce3-9714-9b9c40849daf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// "Trailing P/S Ratio (Current)" calculates Price-to-Sales using the TTM period
+	measure trailingPsRatioChange = ```
+			
+			// "Trailing P/S Ratio (Change)" is the difference 
+			// between the current and previous TTM ratio.
+			[trailingPsRatio] - [trailingPsRatioPrevious]
+			```
+		displayFolder: Metrics TTM
+		lineageTag: 13ce38dd-ceca-48a6-b908-71436104cd95
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition _Measures = m
 		mode: import
 		source =

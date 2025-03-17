@@ -115,7 +115,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Alphabet Inc.'"
+                                "Value": "'Microsoft Corporation'"
                               }
                             }
                           ]
@@ -216,5 +216,24 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5a1f8304d0e1474009b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dTickers"
+              }
+            },
+            "Property": "fullExchangeName"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ]
   }
 }
