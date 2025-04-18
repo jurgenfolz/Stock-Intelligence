@@ -14,7 +14,7 @@ expression Interval = "1d" meta [IsParameterQuery=true, Type="Text", IsParameter
 
 	annotation PBI_ResultType = Text
 
-expression Range = "1y" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression Range = "5y" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: e5e4eda3-38bf-4b3d-915b-3b5a70d0de55
 	queryGroup: Parameters
 

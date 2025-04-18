@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "10342c6616041b6a0d25",
   "position": {
     "x": 841.88323917137473,
@@ -115,7 +115,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Microsoft Corporation'"
+                                "Value": "'Apple Inc.'"
                               }
                             }
                           ]

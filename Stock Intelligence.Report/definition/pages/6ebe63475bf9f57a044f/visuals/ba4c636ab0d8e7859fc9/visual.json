@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "ba4c636ab0d8e7859fc9",
   "position": {
     "x": 1030.8624708624709,
     "y": 9.6969696969696972,
-    "z": 7001,
+    "z": 7000,
     "height": 60.41958041958042,
     "width": 238.69463869463871,
-    "tabOrder": 7001
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -115,7 +115,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Microsoft Corporation'"
+                                "Value": "'Apple Inc.'"
                               }
                             }
                           ]

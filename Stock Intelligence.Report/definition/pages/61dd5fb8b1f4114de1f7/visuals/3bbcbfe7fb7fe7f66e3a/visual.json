@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.6.0/schema.json",
   "name": "3bbcbfe7fb7fe7f66e3a",
   "position": {
     "x": 1080.5273069679849,
@@ -42,7 +42,7 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "5D"
                 }
               }
             }
@@ -79,7 +79,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "15D"
+                            "Value": "5D"
                           }
                         }
                       }

@@ -878,6 +878,15 @@ table _Measures
 			```
 		lineageTag: 22393062-f129-48e3-87f7-b223588421c7
 
+	measure ChangeColor = ```
+			
+			 SWITCH(
+			    TRUE(),
+			    [PriceChange]<0,"#E53935",
+			    "#43A047")
+			```
+		lineageTag: fdacf546-43b2-445f-b3f6-213321ef62b2
+
 	partition _Measures = m
 		mode: import
 		source =
